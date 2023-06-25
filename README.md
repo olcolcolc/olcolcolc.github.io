@@ -6,7 +6,7 @@
 
 - <b>[Just Memes App](https://github.com/olcolcolc/JustMemesApp)</b></br>
   App that allows users to view and post memes, also vote for them.
-  - <b>[LookUp](https://github.com/olcolcolc/LookUpNg)</b></br>
+- <b>[LookUpNg](https://github.com/olcolcolc/LookUpNg)</b></br>
 This is a flight ticket booking application developed as a learning project to practice Angular.
 - <b>[CakeCalc Web App](https://github.com/olcolcolc/CakeCalcWebApp)</b></br>
   My first app in Vanilla JS. Application developed for learning purposes. The app is designed for bakers and helps calculate the cost of a cake and determine the size of the baking pan needed to bake the sponge for the cake.
