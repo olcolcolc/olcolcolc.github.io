@@ -32,6 +32,10 @@ Coding exercise - game where you take on the role of the Cookie Monster and indu
 <a href="https://www.npmjs.com/"><img src="https://user-images.githubusercontent.com/25181517/121401671-49102800-c959-11eb-9f6f-74d49a5e1774.png" width="32px"></a>
 <a href="https://webpack.js.org/"><img src="https://user-images.githubusercontent.com/25181517/187955008-981340e6-b4cc-441b-80cf-7a5e94d29e7e.png" width="32px"></a>
 <a href="https://www.python.org/"><img src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" width="32px"></a>
+<a href="https://vitejs.dev/"><img src="https://vitejs.dev/logo.svg" width="32px"></a>
+<a href="https://www.styled-components.com"><img src="https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png" width="32px"></a>
+
+
 
 
 
