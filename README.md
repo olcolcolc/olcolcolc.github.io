@@ -3,7 +3,8 @@
 <p>This is my GitHub repository where I gather various projects and coding experiments. You will find information about me and what I'm currently working on. Feel free to explore my projects and collaborate!</p>
 
 <h2>My Projects:</h2>
-
+- <b>[CakeCalcReactApp](https://github.com/olcolcolc/CakeCalcReactApp)</b></br>
+  An application built on the foundation of my initial vanilla JavaScript project. This time, I refined and rewrote it using React.
 - <b>[Just Memes App](https://github.com/olcolcolc/JustMemesApp)</b></br>
   App that allows users to view and post memes, also vote for them.
 - <b>[LookUpNg](https://github.com/olcolcolc/LookUpNg)</b></br>
