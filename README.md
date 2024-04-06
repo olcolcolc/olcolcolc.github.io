@@ -1,5 +1,8 @@
 <div align="center"><h1>Hi, I'm Ola! ✨</h1>
-<h3>Future frontend developer</h3>
+<h2>Future frontend developer</h2>
+<h3>Connect with me</h3>
+<a href="https://www.linkedin.com/in/aleksandraczyrnek"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> <a href="mailto:aleksandra@czyrnek.net"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
+<br><br>
 <p>This is my GitHub repository where I gather various projects.<br></div>
 I've been learning programming for over 2 years. Firstly, I started with Python, but the more I delved into frontend development, the more I enjoyed it, and it became my passion. In July, I completed postgraduate studies in "Frontend Developer with Angular", but at the moment, I'm focusing the most on:
 <br>⚛️ React, and
@@ -24,10 +27,6 @@ Simple calculator which gives you sizes of cake tins to produce a layer cake, an
 - <b><a href="https://github.com/olcolcolc/Omnomnom_game">Omnomnom game</a></b></br>
 Coding exercise - game where you take on the role of the Cookie Monster and indulge in your love for cookies</br>
 
-<h2>Connect with me:</h2>
-<a href="https://www.linkedin.com/in/aleksandraczyrnek"> <img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white"></a> </br>
-<a href="mailto:aleksandra@czyrnek.net"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white"></a>
-
 <h2>Technologies I use:</h2>
 <a href="https://git-scm.com/"><img src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png" width="32px"></a>
 <a href="https://dev.w3.org/html5/spec-LC/"><img src="https://user-images.githubusercontent.com/25181517/192158954-f88b5814-d510-4564-b285-dff7d6400dad.png" width="32px"></a>
@@ -43,6 +42,8 @@ Coding exercise - game where you take on the role of the Cookie Monster and indu
 <a href="https://www.python.org/"><img src="https://user-images.githubusercontent.com/25181517/183423507-c056a6f9-1ba8-4312-a350-19bcbc5a8697.png" width="32px"></a>
 <a href="https://vitejs.dev/"><img src="https://vitejs.dev/logo.svg" width="32px"></a>
 <a href="https://www.styled-components.com"><img src="https://raw.githubusercontent.com/styled-components/brand/master/styled-components.png" width="32px"></a>
+
+
 
 
 
