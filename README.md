@@ -54,13 +54,14 @@ This is a flight ticket booking application developed as a learning project to p
     </br>
 Simple calculator which gives you sizes of cake tins to produce a layer cake, and price of cake. Created with customtkinter module in python.
     </br>
-    <i><b>Python/b></i><br>
+    <i><b>Python</b></i><br>
 </li>
 <li>
     <b><a href="https://github.com/olcolcolc/Omnomnom_game">Omnomnom game</a></b></br>
 Coding exercise - game where you take on the role of the Cookie Monster and indulge in your love for cookies
-    <i><b>Python/b></i><br>
     </br>
+    <i><b>Python</b></i><br>
+
 </li>
 </ul>
 
