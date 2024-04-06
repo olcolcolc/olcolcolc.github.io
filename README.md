@@ -1,6 +1,6 @@
-<h1>Hi, I'm Ola! ✨</h1>
+<div style="text-align:center"><h1>Hi, I'm Ola! ✨</h1>
 <h4>Future frontend developer</h4>
-<p>This is my GitHub repository where I gather various projects and coding experiments. You will find information about me and what I'm currently working on. Feel free to explore my projects and collaborate!</p>
+<p>This is my GitHub repository where I gather various projects and coding experiments. You will find information about me and what I'm currently working on. Feel free to explore my projects and collaborate!</p></div>
 
 <h2>My Projects:</h2>
 - <b><a href="https://github.com/olcolcolc/RNWeatherApp">RNWeatherApp</a></b></br>
