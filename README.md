@@ -1,15 +1,21 @@
-<div style="text-align:center"><h1>Hi, I'm Ola! ✨</h1>
-<h4>Future frontend developer</h4>
-<p>This is my GitHub repository where I gather various projects and coding experiments. You will find information about me and what I'm currently working on. Feel free to explore my projects and collaborate!</p></div>
+<div align="center"><h1>Hi, I'm Ola! ✨</h1>
+<h3>Future frontend developer</h3>
+<p>This is my GitHub repository where I gather various projects.<br></div>
+I've been learning programming for over 2 years. Firstly, I started with Python, but the more I delved into frontend development, the more I enjoyed it, and it became my passion. In July, I completed postgraduate studies in "Frontend Developer with Angular", but at the moment, I'm focusing the most on:
+<br>⚛️ React, and
+<br>💻 TypeScript. 
+<br>Learning and growing in the field of web application development brings me pure joy so I always learn - I'm actively involved in various projects and continually expanding my portfolio. 
+For the past few years, I have been working in a restaurant, where I am responsible for the pastry section. This experience has shaped me as a hardworking, patient, responsible, flexible, and capable individual, able to work under time pressure. Acquiring knowledge about pastry-making on my own has taught me how to seek knowledge and develop independently. I am convinced that the skills and qualities I have gained during my professional experience are also crucial for effective work in a programming team. 🚀
+<br>Feel free to explore my projects and collaborate! </p>
 
 <h2>My Projects:</h2>
-- <b><a href="https://github.com/olcolcolc/RNWeatherApp">RNWeatherApp</a></b></br>
+- <b><a href="https://github.com/olcolcolc/RNWeatherApp">RNWeatherApp</a> 🌥️</b></br>
   A mobile application  that fetches your location and displays the current weather along with the weekly weather forecast.</br>
-- <b><a href="https://github.com/olcolcolc/CakeCalcReactApp">CakeCalcReactApp</a></b></br>
+- <b><a href="https://github.com/olcolcolc/CakeCalcReactApp">CakeCalcReactApp</a> 🍰</b></br>
   An application built on the foundation of my initial vanilla JavaScript project. This time, I refined and rewrote it using React.</br>
-- <b><a href="https://github.com/olcolcolc/JustMemesApp">Just Memes App</a></b></br>
+- <b><a href="https://github.com/olcolcolc/JustMemesApp">Just Memes App</a> 🙃</b></br>
   App that allows users to view and post memes, also vote for them.</br>
-- <b><a href="https://github.com/olcolcolc/LookUpNg">LookUpNg</a></b></br>
+- <b><a href="https://github.com/olcolcolc/LookUpNg">LookUpNg</a> ✈️</b></br>
 This is a flight ticket booking application developed as a learning project to practice Angular.</br>
 - <b><a href="https://github.com/olcolcolc/CakeCalcWebApp">CakeCalc Web App</a></b></br>
   My first app in Vanilla JS. Application developed for learning purposes. The app is designed for bakers and helps calculate the cost of a cake and determine the size of the baking pan needed to bake the sponge for the cake.</br>
