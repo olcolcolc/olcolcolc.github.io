@@ -12,20 +12,57 @@ For the past few years, I have been working in a restaurant, where I am responsi
 <br>Feel free to explore my projects and collaborate! </p>
 
 <h2>My Projects:</h2>
-- <b><a href="https://github.com/olcolcolc/RNWeatherApp">RNWeatherApp</a> 🌥️</b></br>
-  A mobile application  that fetches your location and displays the current weather along with the weekly weather forecast.</br>
-- <b><a href="https://github.com/olcolcolc/CakeCalcReactApp">CakeCalcReactApp</a> 🍰</b></br>
-  An application built on the foundation of my initial vanilla JavaScript project. This time, I refined and rewrote it using React.</br>
-- <b><a href="https://github.com/olcolcolc/JustMemesApp">Just Memes App</a> 🙃</b></br>
-  App that allows users to view and post memes, also vote for them.</br>
-- <b><a href="https://github.com/olcolcolc/LookUpNg">LookUpNg</a> ✈️</b></br>
-This is a flight ticket booking application developed as a learning project to practice Angular.</br>
-- <b><a href="https://github.com/olcolcolc/CakeCalcWebApp">CakeCalc Web App</a></b></br>
-  My first app in Vanilla JS. Application developed for learning purposes. The app is designed for bakers and helps calculate the cost of a cake and determine the size of the baking pan needed to bake the sponge for the cake.</br>
-- <b><a href="https://github.com/olcolcolc/CakeCalc">Cake Calc</a></b></br>
-Simple calculator which gives you sizes of cake tins to produce a layer cake, and price of cake. Created with customtkinter module in python.</br>
-- <b><a href="https://github.com/olcolcolc/Omnomnom_game">Omnomnom game</a></b></br>
-Coding exercise - game where you take on the role of the Cookie Monster and indulge in your love for cookies</br>
+<ul>
+  <li>
+    <b><a href="https://github.com/olcolcolc/RNWeatherApp">RNWeatherApp</a> 🌥️</b>
+    <br>
+    A mobile application  that fetches your location and displays the current weather along with the weekly weather forecast.
+    <br>
+    <i><b>React Native, Expo, TypeScript, Axios, MobX</b></i>  
+  </li>
+  
+<li> 
+    <b><a href="https://github.com/olcolcolc/CakeCalcReactApp">CakeCalcReactApp</a> 🍰</b>  
+    </br>
+  An application built on the foundation of my initial vanilla JavaScript project. This time, I refined and rewrote it using React. 
+    </br>
+    <i><b>React, Expo, Typescript, Styled Components, Emotion, i18next</b></i><br>
+</li>
+<li>
+    <b><a href="https://github.com/olcolcolc/JustMemesApp">Just Memes App</a> 🙃</b>
+    </br>
+  App that allows users to view and post memes, also vote for them.
+    </br>
+    <i><b>React, Sass, Typescript, Firebase Firestore, React Spring</b></i><br>
+</li>
+<li>
+    <b><a href="https://github.com/olcolcolc/LookUpNg">LookUpNg</a> ✈️</b>
+    </br>
+This is a flight ticket booking application developed as a learning project to practice Angular.
+    </br>
+    <i><b>Angular, Typescript, Firebase Firestore, SCSS, REST API</b></i><br>
+</li>
+<li>
+    <b><a href="https://github.com/olcolcolc/CakeCalcWebApp">CakeCalc Web App</a></b>
+    </br>
+  My first app in Vanilla JS. Application developed for learning purposes. The app is designed for bakers and helps calculate the cost of a cake and determine the size of the baking pan needed to bake the sponge for the cake.
+    </br>
+    <i><b>HTML, CSS, JavaScript</b></i><br>
+</li>
+<li>
+    <b><a href="https://github.com/olcolcolc/CakeCalc">Cake Calc</a></b>
+    </br>
+Simple calculator which gives you sizes of cake tins to produce a layer cake, and price of cake. Created with customtkinter module in python.
+    </br>
+    <i><b>Python/b></i><br>
+</li>
+<li>
+    <b><a href="https://github.com/olcolcolc/Omnomnom_game">Omnomnom game</a></b></br>
+Coding exercise - game where you take on the role of the Cookie Monster and indulge in your love for cookies
+    <i><b>Python/b></i><br>
+    </br>
+</li>
+</ul>
 
 <h2>Technologies I use:</h2>
 <a href="https://git-scm.com/"><img src="https://user-images.githubusercontent.com/25181517/192108372-f71d70ac-7ae6-4c0d-8395-51d8870c2ef0.png" width="32px"></a>
