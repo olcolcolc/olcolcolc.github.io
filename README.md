@@ -3,6 +3,8 @@
 <p>This is my GitHub repository where I gather various projects and coding experiments. You will find information about me and what I'm currently working on. Feel free to explore my projects and collaborate!</p>
 
 <h2>My Projects:</h2>
+- <b><a href="https://github.com/olcolcolc/RNWeatherApp">RNWeatherApp</a></b></br>
+  A mobile application  that fetches your location and displays the current weather along with the weekly weather forecast.</br>
 - <b><a href="https://github.com/olcolcolc/CakeCalcReactApp">CakeCalcReactApp</a></b></br>
   An application built on the foundation of my initial vanilla JavaScript project. This time, I refined and rewrote it using React.</br>
 - <b><a href="https://github.com/olcolcolc/JustMemesApp">Just Memes App</a></b></br>
