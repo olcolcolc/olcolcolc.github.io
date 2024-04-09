@@ -11,7 +11,7 @@ const Navbar = () => {
             to="section1"
             spy={true}
             smooth={true}
-            offset={-70} //
+            offset={-70}
             duration={500}
           >
             Section 1
