@@ -24,7 +24,7 @@ For the past few years, I have been working in a restaurant, where I am responsi
 <li> 
     <b><a href="https://github.com/olcolcolc/CakeCalcReactApp">CakeCalcReactApp</a> 🍰</b>  
     </br>
-  An application built on the foundation of my initial vanilla JavaScript project. This time, I refined and rewrote it using React. 
+An application built on the foundation of my initial vanilla JavaScript project. This time, I refined and rewrote it using React, collaborating with a UI designer.
     </br>
     <i><b>React, Expo, Typescript, Styled Components, Emotion, i18next</b></i><br>
 </li>
