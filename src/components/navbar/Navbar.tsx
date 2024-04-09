@@ -11,7 +11,7 @@ const Navbar = () => {
             to="section1"
             spy={true}
             smooth={true}
-            offset={-70} // Offset może być dostosowany do Twojego layoutu
+            offset={-70} //
             duration={500}
           >
             Section 1
@@ -29,7 +29,7 @@ const Navbar = () => {
             Section 2
           </Link>
         </li>
-        {/* Dodaj kolejne linki dla innych sekcji */}
+        {/* Dodaj kolejne lki dla innych sekcji */}
       </ul>
     </nav>
   );
