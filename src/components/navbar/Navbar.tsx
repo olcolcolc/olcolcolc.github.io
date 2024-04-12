@@ -6,9 +6,8 @@ const Nav = styled.nav`
   align-items: center;
   justify-content: space-evenly;
   height: 8vh;
-  width: 300px;
+  width: 100%;
   transition: 0.5s ease-in;
-  border: solid 1px black;
 `;
 
 const MenuItem = styled.li`
@@ -39,7 +38,9 @@ function Navbar() {
         <MenuLink href="/Education">Education</MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink href="/Linkedin">Linkedin</MenuLink>
+        <MenuLink href="https://www.linkedin.com/in/aleksandraczyrnek/">
+          Linkedin
+        </MenuLink>
       </MenuItem>
     </Nav>
   );
