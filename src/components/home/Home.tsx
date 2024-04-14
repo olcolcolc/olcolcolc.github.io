@@ -5,6 +5,7 @@ import myAvatar from "../../assets/IMG_4906.jpg";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { Icon } from "../icon/Icon";
 
 const HomeContainer = styled.div`
   display: flex;
@@ -52,6 +53,11 @@ const List = styled.ul`
   list-style-type: none;
 `;
 
+const Technology = styled.li`
+  align-items: center;
+  padding-bottom: 0.1rem;
+`;
+
 const TechnologiesDiv = styled.div`
   display: flex;
   flex-direction: row;
@@ -93,9 +99,15 @@ function Home() {
         <Bio>
           <Subtitle>technologies I know</Subtitle>
           <List>
-            <li>React</li>
-            <li>TypeScript</li>
-            <li>JavaScript</li>
+            <Technology>
+              <Icon name="react" /> React
+            </Technology>
+            <Technology>
+              <Icon name="typescript" /> TypeScript
+            </Technology>
+            <Technology>
+              <Icon name="javascript" /> JavaScript
+            </Technology>
             <li>Firebase</li>
             <li>Figma</li>
             <li>npm, yarn</li>
