@@ -36,6 +36,7 @@ const Subtitle = styled.h3`
   overflow: hidden;
   white-space: nowrap;
   letter-spacing: 0.15em;
+  padding: 1rem;
 `;
 
 const Bio = styled.p`
@@ -45,6 +46,19 @@ const Bio = styled.p`
   padding: 2rem;
   overflow: hidden;
   letter-spacing: 0.15em;
+`;
+
+const List = styled.ul`
+  list-style-type: none;
+`;
+
+const TechnologiesDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  @media screen and (max-width: 650px) {
+    flex-direction: column;
+  }
 `;
 
 // react-router-dom, types
@@ -75,6 +89,33 @@ function Home() {
         check out my portfolio!
       </Bio>
       <FontAwesomeIcon icon={faArrowDown} />
+      <TechnologiesDiv>
+        <Bio>
+          <Subtitle>technologies I know</Subtitle>
+          <List>
+            <li>React</li>
+            <li>TypeScript</li>
+            <li>JavaScript</li>
+            <li>Firebase</li>
+            <li>Figma</li>
+            <li>npm, yarn</li>
+            <li>Angular</li>
+            <li>Python</li>
+            <li>Scss</li>
+            <li>styled components</li>
+            <li>Emotion</li>
+            <li>Retool</li>
+            <li>REST Api</li>
+          </List>
+        </Bio>
+        <Bio>
+          <Subtitle>technologies I'm learning</Subtitle>
+          <List>
+            <li>Next.js</li>
+            <li>React Native</li>
+          </List>
+        </Bio>
+      </TechnologiesDiv>
     </HomeContainer>
   );
 }
