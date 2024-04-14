@@ -2,8 +2,9 @@ import React from "react";
 import { theme } from "../../theme/theme";
 import styled from "@emotion/styled";
 import myAvatar from "../../assets/IMG_4906.jpg";
-import { keyframes } from "@emotion/react";
 import { useTypewriter, Cursor } from "react-simple-typewriter";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 const HomeContainer = styled.div`
   display: flex;
@@ -37,6 +38,15 @@ const Subtitle = styled.h3`
   letter-spacing: 0.15em;
 `;
 
+const Bio = styled.p`
+  display: block;
+  text-align: justify;
+  color: ${theme.colors.black};
+  padding: 2rem;
+  overflow: hidden;
+  letter-spacing: 0.15em;
+`;
+
 // react-router-dom, types
 
 function Home() {
@@ -53,6 +63,18 @@ function Home() {
           <Cursor />
         </span>
       </Subtitle>
+      <Bio>
+        Hello, <br />
+        I've spent the last 2,5 years immersing myself in coding, starting with
+        Python and gradually transitioning to frontend development, which has
+        become my passion. I completed postgraduate studies in 'Front-end
+        Development with Angular' to strengthen my skills. Currently, my focus
+        is on React and TypeScript. I'm constantly learning - I've just
+        completed Dare IT mentoring program and enhanced my skills with a
+        mentor. Currently, I'm involved in two group projects. Feel free to
+        check out my portfolio!
+      </Bio>
+      <FontAwesomeIcon icon={faArrowDown} />
     </HomeContainer>
   );
 }
