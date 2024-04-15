@@ -38,7 +38,10 @@ function Navbar() {
         <MenuLink href="/Education">Education</MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink href="https://www.linkedin.com/in/aleksandraczyrnek/">
+        <MenuLink
+          href="https://www.linkedin.com/in/aleksandraczyrnek/"
+          target="_blank"
+        >
           Linkedin
         </MenuLink>
       </MenuItem>

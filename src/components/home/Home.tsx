@@ -54,8 +54,9 @@ const List = styled.ul`
 `;
 
 const Technology = styled.li`
-  align-items: center;
-  padding-bottom: 0.1rem;
+  display: flex;
+  flex-direction: row;
+  padding: 0.25rem 0;
 `;
 
 const TechnologiesDiv = styled.div`
@@ -82,6 +83,17 @@ function Home() {
         <span style={{ color: "orange" }}>
           <Cursor />
         </span>
+        <Technology style={{ justifyContent: "center", paddingTop: "1rem" }}>
+          <a
+            href="https://www.linkedin.com/in/aleksandraczyrnek/"
+            target="_blank"
+          >
+            <Icon name="linkedin" />
+          </a>
+          <a href="https://www.github.com/olcolcolc" target="_blank">
+            <Icon name="github" />
+          </a>
+        </Technology>
       </Subtitle>
       <Bio>
         Hello, <br />
@@ -108,23 +120,44 @@ function Home() {
             <Technology>
               <Icon name="javascript" /> JavaScript
             </Technology>
-            <li>Firebase</li>
-            <li>Figma</li>
-            <li>npm, yarn</li>
-            <li>Angular</li>
-            <li>Python</li>
-            <li>Scss</li>
-            <li>styled components</li>
-            <li>Emotion</li>
-            <li>Retool</li>
-            <li>REST Api</li>
+            <Technology>
+              <Icon name="firebase" /> Firebase
+            </Technology>
+            <Technology>
+              <Icon name="figma" /> Figma
+            </Technology>
+            <Technology>
+              <Icon name="angular" /> Angular
+            </Technology>
+            <Technology>
+              <Icon name="python" /> Python
+            </Technology>
+            <Technology>
+              <Icon name="sass" /> Sass
+            </Technology>
+            <Technology>
+              <Icon name="styledComponents" />
+              Styled components, Emotion
+            </Technology>
+            <Technology>
+              <Icon name="retool" />
+              Retool
+            </Technology>
+            <Technology>
+              <Icon name="restApi" />
+              REST API
+            </Technology>
           </List>
         </Bio>
         <Bio>
           <Subtitle>technologies I'm learning</Subtitle>
           <List>
-            <li>Next.js</li>
-            <li>React Native</li>
+            <Technology>
+              <Icon name="nextjs" /> Next.js
+            </Technology>
+            <Technology>
+              <Icon name="react" /> React Native
+            </Technology>
           </List>
         </Bio>
       </TechnologiesDiv>
