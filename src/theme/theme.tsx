@@ -10,6 +10,9 @@ const mixins = {
       text-transform: uppercase;
       cursor: pointer;
     `,
+  defaultTransition: () => `
+      transition: all 0.3s ease-in-out;
+    `,
 
   defaultHover: () => `
       &:hover {
@@ -30,6 +33,7 @@ const colors = {
 
 const fontSize = {
   base: "16px",
+  large: "42px",
 };
 
 const padding = {
@@ -48,11 +52,6 @@ const letterSpacing = {
   default: "2px",
 };
 
-const width = {
-  menuDropdown: "200px",
-  woltDropdown: "180px",
-};
-
 export const theme = {
   colors,
   fontSize,
@@ -61,7 +60,6 @@ export const theme = {
   border,
   mixins,
   letterSpacing,
-  width,
 };
 
 export type Theme = typeof theme;
