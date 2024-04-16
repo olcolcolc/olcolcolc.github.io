@@ -32,10 +32,10 @@ function Navbar() {
         <MenuLink href="/">Home</MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink href="/Projects">Projects</MenuLink>
+        <MenuLink href="/projects">Projects</MenuLink>
       </MenuItem>
       <MenuItem>
-        <MenuLink href="/Education">Education</MenuLink>
+        <MenuLink href="/education">Education</MenuLink>
       </MenuItem>
       <MenuItem>
         <MenuLink

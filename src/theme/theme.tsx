@@ -1,28 +1,4 @@
-const mixins = {
-  forDesktop: (content: string) => `
-      @media screen and (min-width: 601px) {
-        ${content}
-      }
-    `,
-
-  defaultButton: () => `
-      all: unset;
-      text-transform: uppercase;
-      cursor: pointer;
-    `,
-  defaultTransition: () => `
-      transition: all 0.3s ease-in-out;
-    `,
-
-  defaultHover: () => `
-      &:hover {
-        background-color: #e0e0e0;
-      }
-      &:active {
-        background-color: #bebdbd;
-      }
-    `,
-};
+import { keyframes } from "@emotion/react";
 
 const colors = {
   white: "#ffffff",
@@ -36,30 +12,62 @@ const fontSize = {
   large: "42px",
 };
 
-const padding = {
-  default: "20px",
-};
+const fadeInAnimation = keyframes`
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+`;
 
-const margin = {
-  default: "20px",
-};
+const mixins = {
+  forDesktop: (content: string) => `
+      @media screen and (min-width: 601px) {
+        ${content}
+      }
+    `,
+  defaultTransition: () => `
+      transition: all 0.3s ease-in-out;
+    `,
+  home: () => `
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    padding-top: 2rem;
+    color: ${colors.black};
+    transition: 0.5s ease-in;
+    animation: ${fadeInAnimation} 0.5s ease-in-out;
+    `,
 
-const border = {
-  default: `2px solid ${colors.black}`,
-};
+  title: () => `
+    color: ${colors.black};
+    font-size: ${fontSize.large};
+    margin-top: 2rem;
+    `,
 
-const letterSpacing = {
-  default: "2px",
+  subtitle: () => `
+  display: inline-block;
+  color: ${colors.black};
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.15em;
+  padding: 1rem;
+    `,
+  bio: () => `
+    display: block;
+    text-align: justify;
+    color: ${colors.black};
+    padding: 2rem;
+    overflow: hidden;
+    letter-spacing: 0.15em;
+    `,
 };
 
 export const theme = {
   colors,
   fontSize,
-  padding,
-  margin,
-  border,
   mixins,
-  letterSpacing,
+  fadeInAnimation,
 };
 
 export type Theme = typeof theme;
