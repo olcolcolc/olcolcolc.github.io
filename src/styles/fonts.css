@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Black_BasisGrotesqueArabicPro";
+  src: url("../assets/fonts/BasisGrotesquePROFontFamily/BasisGrotesqueArabicPro-Black.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Bold_BasisGrotesqueArabicPro";
+  src: url("../assets/fonts/BasisGrotesquePROFontFamily/BasisGrotesqueArabicPro-Bold.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Light_BasisGrotesqueArabicPro";
+  src: url("../assets/fonts/BasisGrotesquePROFontFamily/BasisGrotesqueArabicPro-Light.ttf")
+    format("truetype");
+}
+@font-face {
+  font-family: "Medium_BasisGrotesqueArabicPro";
+  src: url("../assets/fonts/BasisGrotesquePROFontFamily/BasisGrotesqueArabicPro-Medium.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Regular_BasisGrotesqueArabicPro";
+  src: url("../assets/fonts/BasisGrotesquePROFontFamily/BasisGrotesqueArabicPro-Regular.ttf")
+    format("truetype");
+}
