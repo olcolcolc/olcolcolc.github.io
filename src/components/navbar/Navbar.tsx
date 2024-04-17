@@ -97,7 +97,6 @@ function Navbar() {
           <span style={{ color: "orange" }}>
             <Cursor />
           </span>
-          {/* <div>HASŁO</div> */}
         </Text>
         <Menu>
           {["About", "Education", "Projects", "Experience"].map((link) => (

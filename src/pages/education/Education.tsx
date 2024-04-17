@@ -1,6 +1,32 @@
 import styled from "@emotion/styled";
+import { useState } from "react";
 import { theme } from "../../styles/theme";
-import Text from "../../components/text/Text";
+
+type CourseProps = {
+  isHovered: boolean;
+};
+
+type CvPositionProps = {
+  onMouseEnter?: () => void;
+  onMouseLeave?: () => void;
+};
+
+const CvPosition = styled.div<CvPositionProps>`
+  padding: 0.5rem 0;
+  margin: 1rem;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  ${theme.mixins.defaultTransition}
+
+  &:hover {
+    border-radius: 0.5rem;
+    background: rgba(19, 27, 48, 0.284);
+    cursor: pointer;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border: 0 solid #e5e7eb;
+  }
+`;
 
 const EducationDiv = styled.div`
   ${theme.mixins.home()}
@@ -22,25 +48,18 @@ const Years = styled.p`
   width: 9rem;
 `;
 
-const Course = styled.p`
+const Course = styled.p<CourseProps>`
   font-family: ${theme.fonts.montserrat};
   font-weight: 700;
   padding: 0.5rem;
+  color: ${(props) => (props.isHovered ? "orange" : theme.colors.darkFont)};
+  transition: color 0.3s ease;
 `;
 
 const School = styled.p`
   padding: 0.5rem;
   font-size: large;
   color: ${theme.colors.darkFont};
-`;
-
-const CvPosition = styled.div`
-  padding: 2rem;
-  display: flex;
-  width: 100%;
-  justify-content: center;
-  flex-direction: row;
-  ${theme.mixins.defaultTransition}
 `;
 
 const SchoolCourseDiv = styled.div`
@@ -55,13 +74,20 @@ const Info = styled.div`
 `;
 
 function Education() {
+  const [hoveredPosition, setHoveredPosition] = useState<number | null>(null);
+
   return (
     <EducationDiv>
       <MenuTitle>EDUCATION</MenuTitle>
-      <CvPosition>
+      <CvPosition
+        onMouseEnter={() => setHoveredPosition(0)}
+        onMouseLeave={() => setHoveredPosition(null)}
+      >
         <Years>2022-2023</Years>
         <SchoolCourseDiv>
-          <Course>Postgraduate: Frontend developer with Angular </Course>
+          <Course isHovered={hoveredPosition === 0} as="p">
+            Postgraduate: Frontend developer with Angular
+          </Course>
           <School>WSB Merito University</School>
           <Info>
             The studies I undertook to organize the knowledge I gained on my
@@ -75,22 +101,16 @@ function Education() {
           </Info>
         </SchoolCourseDiv>
       </CvPosition>
-      <CvPosition>
-        <Years>2021</Years>
-        <SchoolCourseDiv>
-          <Course>Python from the basics</Course>
-          <School>Hardcoder</School>
-          <Info>
-            I completed the online course at Hardcoder School to organize the
-            knowledge I acquired on my own. The course concluded with a project
-            for completion.
-          </Info>
-        </SchoolCourseDiv>
-      </CvPosition>
-      <CvPosition>
+
+      <CvPosition
+        onMouseEnter={() => setHoveredPosition(1)}
+        onMouseLeave={() => setHoveredPosition(null)}
+      >
         <Years>2018-2019</Years>
         <SchoolCourseDiv>
-          <Course>Postgraduate: Psychology (Crisis Intervention) </Course>
+          <Course isHovered={hoveredPosition === 1} as="p">
+            Postgraduate: Psychology (Crisis Intervention){" "}
+          </Course>
           <School>University of Social Sciences and Humanities</School>
           <Info>
             I have acquired knowledge in clinical psychology, with a particular
@@ -101,10 +121,16 @@ function Education() {
           </Info>
         </SchoolCourseDiv>
       </CvPosition>
-      <CvPosition>
+
+      <CvPosition
+        onMouseEnter={() => setHoveredPosition(2)}
+        onMouseLeave={() => setHoveredPosition(null)}
+      >
         <Years>2012-2017</Years>
         <SchoolCourseDiv>
-          <Course>Master degree in Management (Lean Management) </Course>
+          <Course isHovered={hoveredPosition === 2} as="p">
+            Master degree in Management (Lean Management){" "}
+          </Course>
           <School>University of Social Sciences and Humanities</School>
           <Info>
             Throughout my Master's program in Management, specifically

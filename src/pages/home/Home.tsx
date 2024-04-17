@@ -1,10 +1,10 @@
 import { theme } from "../../styles/theme";
 import styled from "@emotion/styled";
-import myAvatar from "../../assets/imgs/IMG_4906.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Icon } from "../../components/icon/Icon";
 import Text from "../../components/text/Text";
+import myAvatar from "../../assets/imgs/myAvatar.jpg";
 
 const HomeContainer = styled.div`
   ${theme.mixins.home()}
@@ -40,7 +40,6 @@ function Home() {
   return (
     <HomeContainer>
       <Avatar src={myAvatar} aria-label="my avatar" />
-
       <Text variant="bio">
         Hello, <br />
         I've spent the last 2,5 years immersing myself in coding, starting with

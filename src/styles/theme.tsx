@@ -3,9 +3,8 @@ import { keyframes } from "@emotion/react";
 const colors = {
   white: "#ffffff",
   black: "#000000",
-  darkgrey: "#121212",
-  darkPrimary: "#1F1B24",
   darkFont: "rgba(207, 221, 251, 0.724);",
+  background: "#161f38",
 };
 
 const fontSize = {
@@ -70,7 +69,7 @@ const mixins = {
   white-space: nowrap;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-    `,
+  `,
 };
 
 export const theme = {
