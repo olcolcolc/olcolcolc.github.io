@@ -5,6 +5,7 @@ const colors = {
   black: "#000000",
   darkgrey: "#121212",
   darkPrimary: "#1F1B24",
+  darkFont: "rgba(207, 221, 251, 0.724);",
 };
 
 const fontSize = {
@@ -16,6 +17,12 @@ const fadeInAnimation = keyframes`
   0% { opacity: 0; }
   100% { opacity: 1; }
 `;
+
+const fonts = {
+  montserrat: "Montserrat, sans-serif",
+  openSans: "Open Sans, sans-serif",
+  roboto: "Roboto, sans-serif",
+};
 
 const mixins = {
   forDesktop: (content: string) => `
@@ -31,35 +38,38 @@ const mixins = {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100%;
-    width: 100%;
     padding-top: 2rem;
-    color: ${colors.black};
     transition: 0.5s ease-in;
     animation: ${fadeInAnimation} 0.5s ease-in-out;
     `,
 
   title: () => `
-    color: ${colors.black};
+    color: ${colors.white};
     font-size: ${fontSize.large};
     margin-top: 2rem;
+    font-weight: 700;
+    font-family: ${fonts.openSans};
     `,
 
   subtitle: () => `
-  display: inline-block;
-  color: ${colors.black};
+  color: ${colors.darkFont};
   overflow: hidden;
   white-space: nowrap;
-  letter-spacing: 0.15em;
-  padding: 1rem;
+  letter-spacing: 0.3em;
+  padding: 1rem 0;
     `,
   bio: () => `
-    display: block;
     text-align: justify;
-    color: ${colors.black};
-    padding: 2rem;
-    overflow: hidden;
+    color: ${colors.white};
+    padding: 2rem 5rem;
     letter-spacing: 0.15em;
+    `,
+  menuTitle: () => `
+  color: ${colors.darkFont};
+  overflow: hidden;
+  white-space: nowrap;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
     `,
 };
 
@@ -67,6 +77,7 @@ export const theme = {
   colors,
   fontSize,
   mixins,
+  fonts,
   fadeInAnimation,
 };
 

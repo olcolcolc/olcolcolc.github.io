@@ -1,8 +1,6 @@
-import React from "react";
-import { theme } from "../../theme/theme";
+import { theme } from "../../styles/theme";
 import styled from "@emotion/styled";
-import myAvatar from "../../assets/IMG_4906.jpg";
-import { useTypewriter, Cursor } from "react-simple-typewriter";
+import myAvatar from "../../assets/imgs/IMG_4906.jpg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Icon } from "../../components/icon/Icon";
@@ -13,6 +11,7 @@ const HomeContainer = styled.div`
 `;
 
 const Avatar = styled.img`
+  margin-top: 2rem;
   width: 200px;
   height: 200px;
   border-radius: 50%;
@@ -37,33 +36,11 @@ const TechnologiesDiv = styled.div`
   }
 `;
 
-// react-router-dom, types
-
 function Home() {
-  const [subtitle] = useTypewriter({
-    words: ["frontend developer"],
-  });
   return (
     <HomeContainer>
       <Avatar src={myAvatar} aria-label="my avatar" />
-      <Text variant="title">Aleksandra Czyrnek</Text>
-      <Text variant="subtitle">
-        {subtitle}
-        <span style={{ color: "orange" }}>
-          <Cursor />
-        </span>
-        <Technology style={{ justifyContent: "center", paddingTop: "1rem" }}>
-          <a
-            href="https://www.linkedin.com/in/aleksandraczyrnek/"
-            target="_blank"
-          >
-            <Icon name="linkedin" />
-          </a>
-          <a href="https://www.github.com/olcolcolc" target="_blank">
-            <Icon name="github" />
-          </a>
-        </Technology>
-      </Text>
+
       <Text variant="bio">
         Hello, <br />
         I've spent the last 2,5 years immersing myself in coding, starting with

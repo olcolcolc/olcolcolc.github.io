@@ -1,5 +1,5 @@
 import styled from "@emotion/styled";
-import { theme } from "../../theme/theme";
+import { theme } from "../../styles/theme";
 
 const Text = styled.div<{ variant: "title" | "subtitle" | "bio" }>`
   ${({ variant }) => {

@@ -1,18 +1,27 @@
+import styled from "@emotion/styled";
 import "./App.css";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Education from "./pages/education/Education";
+
+const MainDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+`;
+
+const ScrollableDiv = styled.div`
+  flex-direction: column;
+`;
 
 function App() {
   return (
-    <BrowserRouter>
+    <MainDiv>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/education" element={<Education />} />
-      </Routes>
-    </BrowserRouter>
+      <ScrollableDiv>
+        <Home />
+        <Education />
+      </ScrollableDiv>
+    </MainDiv>
   );
 }
 
