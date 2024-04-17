@@ -5,6 +5,7 @@ import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { Icon } from "../icon/Icon";
 import { css } from "@emotion/react";
 import { useState } from "react";
+import { Link } from "react-scroll";
 
 const NavbarDiv = styled.nav`
   width: 100%;
@@ -100,13 +101,22 @@ function Navbar() {
         </Text>
         <Menu>
           {["About", "Education", "Projects", "Experience"].map((link) => (
-            <MenuLink
-              key={link}
-              isActive={activeLink === link}
-              onClick={() => setActiveLink(link)}
+            <Link
+              activeClass="active"
+              to={link}
+              spy={true}
+              smooth="easeInOutQuart"
+              offset={-70}
+              duration={1000}
             >
-              {link}
-            </MenuLink>
+              <MenuLink
+                key={link}
+                isActive={activeLink === link}
+                onClick={() => setActiveLink(link)}
+              >
+                {link}
+              </MenuLink>
+            </Link>
           ))}
         </Menu>
       </Header>

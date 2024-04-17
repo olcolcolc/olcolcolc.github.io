@@ -66,8 +66,10 @@ function Education() {
           <Info>
             The studies I undertook to organize the knowledge I gained on my
             own. We covered topics such as: <br />
+            <br />
             JS / TS / Git / RWD / RestApi / Angular / RxJS / Redux / Jest / HTML
             / CSS / SCSS
+            <br />
             <br />I concluded my studies with two projects for completion: one
             coded in Angular, and the second one in React.
           </Info>

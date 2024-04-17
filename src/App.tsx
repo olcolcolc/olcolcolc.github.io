@@ -18,8 +18,12 @@ function App() {
     <MainDiv>
       <Navbar />
       <ScrollableDiv>
-        <Home />
-        <Education />
+        <div id="About">
+          <Home />
+        </div>
+        <div id="Education">
+          <Education />
+        </div>
       </ScrollableDiv>
     </MainDiv>
   );
