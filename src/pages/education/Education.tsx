@@ -1,6 +1,7 @@
 import styled from "@emotion/styled";
 import { useState } from "react";
 import { theme } from "../../styles/theme";
+import educationData from "../../data/EducationData";
 
 type CourseProps = {
   isHovered: boolean;
@@ -10,6 +11,15 @@ type CvPositionProps = {
   onMouseEnter?: () => void;
   onMouseLeave?: () => void;
 };
+
+const EducationDiv = styled.div`
+  ${theme.mixins.home()}
+`;
+
+const MenuTitle = styled.header`
+  ${theme.mixins.menuTitle()}
+  ${theme.mixins.defaultTransition}
+`;
 
 const CvPosition = styled.div<CvPositionProps>`
   padding: 0.5rem 0;
@@ -26,15 +36,6 @@ const CvPosition = styled.div<CvPositionProps>`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 0 solid #e5e7eb;
   }
-`;
-
-const EducationDiv = styled.div`
-  ${theme.mixins.home()}
-`;
-
-const MenuTitle = styled.h3`
-  ${theme.mixins.menuTitle()}
-  ${theme.mixins.defaultTransition}
 `;
 
 const Years = styled.p`
@@ -79,69 +80,22 @@ function Education() {
   return (
     <EducationDiv>
       <MenuTitle>EDUCATION</MenuTitle>
-      <CvPosition
-        onMouseEnter={() => setHoveredPosition(0)}
-        onMouseLeave={() => setHoveredPosition(null)}
-      >
-        <Years>2022-2023</Years>
-        <SchoolCourseDiv>
-          <Course isHovered={hoveredPosition === 0} as="p">
-            Postgraduate: Frontend developer with Angular
-          </Course>
-          <School>WSB Merito University</School>
-          <Info>
-            The studies I undertook to organize the knowledge I gained on my
-            own. We covered topics such as: <br />
-            <br />
-            JS / TS / Git / RWD / RestApi / Angular / RxJS / Redux / Jest / HTML
-            / CSS / SCSS
-            <br />
-            <br />I concluded my studies with two projects for completion: one
-            coded in Angular, and the second one in React.
-          </Info>
-        </SchoolCourseDiv>
-      </CvPosition>
-
-      <CvPosition
-        onMouseEnter={() => setHoveredPosition(1)}
-        onMouseLeave={() => setHoveredPosition(null)}
-      >
-        <Years>2018-2019</Years>
-        <SchoolCourseDiv>
-          <Course isHovered={hoveredPosition === 1} as="p">
-            Postgraduate: Psychology (Crisis Intervention){" "}
-          </Course>
-          <School>University of Social Sciences and Humanities</School>
-          <Info>
-            I have acquired knowledge in clinical psychology, with a particular
-            focus on trauma psychology, conflict- and crisis-oriented social
-            psychology, as well as psychoprophylaxis. I obtained certificates in
-            ICISF "Assisting Individuals in Crisis" and "Group Crisis
-            Intervention".
-          </Info>
-        </SchoolCourseDiv>
-      </CvPosition>
-
-      <CvPosition
-        onMouseEnter={() => setHoveredPosition(2)}
-        onMouseLeave={() => setHoveredPosition(null)}
-      >
-        <Years>2012-2017</Years>
-        <SchoolCourseDiv>
-          <Course isHovered={hoveredPosition === 2} as="p">
-            Master degree in Management (Lean Management){" "}
-          </Course>
-          <School>University of Social Sciences and Humanities</School>
-          <Info>
-            Throughout my Master's program in Management, specifically
-            emphasizing Lean Management, I learned practical techniques to
-            streamline operations and cut down unnecessary steps. We covered
-            concepts like efficient workflow design, identifying and eliminating
-            bottlenecks, and fostering a culture of continuous improvement
-            within businesses.
-          </Info>
-        </SchoolCourseDiv>
-      </CvPosition>
+      {educationData.map((edu, index) => (
+        <CvPosition
+          key={index}
+          onMouseEnter={() => setHoveredPosition(index)}
+          onMouseLeave={() => setHoveredPosition(null)}
+        >
+          <Years>{edu.years}</Years>
+          <SchoolCourseDiv>
+            <Course isHovered={hoveredPosition === index} as="p">
+              {edu.course}
+            </Course>
+            <School>{edu.school}</School>
+            <Info>{edu.info}</Info>
+          </SchoolCourseDiv>
+        </CvPosition>
+      ))}
     </EducationDiv>
   );
 }

@@ -5,6 +5,10 @@ import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Icon } from "../../components/icon/Icon";
 import Text from "../../components/text/Text";
 import myAvatar from "../../assets/imgs/myAvatar.jpg";
+import {
+  technologiesIKnow,
+  technologiesImLearning,
+} from "../../data/TechStackData";
 
 const HomeContainer = styled.div`
   ${theme.mixins.home()}
@@ -56,53 +60,21 @@ function Home() {
         <Text variant="bio">
           <Text variant="subtitle">technologies I know</Text>
           <List>
-            <Technology>
-              <Icon name="react" /> React
-            </Technology>
-            <Technology>
-              <Icon name="typescript" /> TypeScript
-            </Technology>
-            <Technology>
-              <Icon name="javascript" /> JavaScript
-            </Technology>
-            <Technology>
-              <Icon name="firebase" /> Firebase
-            </Technology>
-            <Technology>
-              <Icon name="figma" /> Figma
-            </Technology>
-            <Technology>
-              <Icon name="angular" /> Angular
-            </Technology>
-            <Technology>
-              <Icon name="python" /> Python
-            </Technology>
-            <Technology>
-              <Icon name="sass" /> Sass
-            </Technology>
-            <Technology>
-              <Icon name="styledComponents" />
-              Styled components, Emotion
-            </Technology>
-            <Technology>
-              <Icon name="retool" />
-              Retool
-            </Technology>
-            <Technology>
-              <Icon name="restApi" />
-              REST API
-            </Technology>
+            {technologiesIKnow.map((tech) => (
+              <Technology key={tech.name}>
+                <Icon name={tech.name} /> {tech.label}
+              </Technology>
+            ))}
           </List>
         </Text>
         <Text variant="bio">
           <Text variant="subtitle">technologies I'm learning</Text>
           <List>
-            <Technology>
-              <Icon name="nextjs" /> Next.js
-            </Technology>
-            <Technology>
-              <Icon name="react" /> React Native
-            </Technology>
+            {technologiesImLearning.map((tech) => (
+              <Technology key={tech.name}>
+                <Icon name={tech.name} /> {tech.label}
+              </Technology>
+            ))}
           </List>
         </Text>
       </TechnologiesDiv>

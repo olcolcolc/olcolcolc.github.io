@@ -65,10 +65,21 @@ const mixins = {
     `,
   menuTitle: () => `
   color: ${colors.darkFont};
-  overflow: hidden;
+  font-weight: 700;
   white-space: nowrap;
   letter-spacing: 0.3em;
   text-transform: uppercase;
+  align-items: center;
+  justify-content: center;
+  display:flex;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  width: 100%;
+  height: 3rem;
+  background: "#161f386d",
+  padding: 1.5rem;
+  backdrop-filter: blur(10px);
   `,
 };
 
