@@ -1,4 +1,6 @@
 import CakeCalcReactAppImgSrc from "../../src/assets/imgs/CakeCalcReactApp.jpg";
+import RNWeatherAppSrc from "../../src/assets/imgs/RNWeatherApp.jpg";
+import JustMemesAppSrc from "../../src/assets/imgs/JustMemesApp.jpg";
 
 interface Projects {
   id: string;
@@ -13,7 +15,7 @@ interface Projects {
 const projectsData: Projects[] = [
   {
     id: "rnweather",
-    imgSrc: CakeCalcReactAppImgSrc,
+    imgSrc: RNWeatherAppSrc,
     name: "RNWeather App",
     description:
       "A mobile application that retrieves the user's current location and displays the current weather as well as the forecast with details for the next 7 days. It is integrated with icons and APIs for this purpose. Application utilizes the Weather API from weatherapi.com.",
@@ -42,7 +44,7 @@ const projectsData: Projects[] = [
   {
     id: "justmemesapp",
     name: "JustMemesApp",
-    imgSrc: CakeCalcReactAppImgSrc,
+    imgSrc: JustMemesAppSrc,
     description:
       "This is a Just Memes App built with React. It allows users to view and post memes to a Firebase Firestore database. Users can also vote on memes by liking or disliking them. The app consists of several components: Landing Page, Top Page, Regular Page, Theme Switcher, Post New Meme. App provides an enjoyable browsing experience for users, allowing them to explore and interact with a collection of memes. ",
     githubUrl: "https://github.com/olcolcolc/JustMemesApp",

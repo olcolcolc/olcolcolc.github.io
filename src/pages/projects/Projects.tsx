@@ -62,6 +62,7 @@ const ProjectImg = styled.img`
   width: 40%;
   height: auto;
   padding: 1rem;
+  border-radius: 20px;
 `;
 
 const Info = styled.div`
