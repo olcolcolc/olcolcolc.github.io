@@ -63,6 +63,11 @@ const ProjectImg = styled.img`
   height: auto;
   padding: 1rem;
   border-radius: 20px;
+  filter: brightness(0.5);
+  transition: filter 0.3s ease;
+  &:hover {
+    filter: brightness(0.9);
+  }
 `;
 
 const Info = styled.div`
