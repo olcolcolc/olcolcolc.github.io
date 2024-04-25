@@ -141,7 +141,7 @@ function Projects() {
             <Info>{project.description}</Info>
             <div style={{ flexDirection: "column" }}>
               {project.githubUrl && (
-                <Link href={project.githubUrl}>
+                <Link href={project.githubUrl} target="_blank">
                   explore the code on github
                   <ArrowIcon
                     icon={faChevronLeft}
@@ -151,7 +151,7 @@ function Projects() {
               )}
 
               {project.deployed && (
-                <Link href={project.deployed}>
+                <Link href={project.deployed} target="_blank">
                   or check the deployed version
                   <ArrowIcon
                     icon={faChevronLeft}
