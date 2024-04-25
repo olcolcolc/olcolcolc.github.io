@@ -1,6 +1,8 @@
 import CakeCalcReactAppImgSrc from "../../src/assets/imgs/CakeCalcReactApp.jpg";
 import RNWeatherAppSrc from "../../src/assets/imgs/RNWeatherApp.jpg";
 import JustMemesAppSrc from "../../src/assets/imgs/JustMemesApp.jpg";
+import LookUpNgSrc from "../../src/assets/imgs/LookUp.jpg";
+import tttrSrc from "../../src/assets/imgs/tttr.jpg";
 
 interface Projects {
   id: string;
@@ -13,6 +15,26 @@ interface Projects {
 }
 
 const projectsData: Projects[] = [
+  {
+    id: "tasker",
+    name: "In progress: Tasker",
+    imgSrc: "",
+    description:
+      "A life management tool for collaborative task organization and building healthy habits. The app will allow users to create, assign, and track tasks, as well as set deadlines and reminders. We, a few mentees from Dare IT, are writing this with the aim to develop an application that helps solve the challenges we face during career transitions and job hunting.",
+    githubUrl: "",
+    deployed: "",
+    technologies: ["Next.js", "React MUI", "Jira"],
+  },
+  {
+    id: "tttr",
+    name: "In progress: Impact Business 2.0",
+    imgSrc: tttrSrc,
+    description:
+      "Group volunteer project facilitated through Tech to the Rescue match - revamping the website for the Impact Business program - a support program created by a Ukrainian non-governmental organization for Ukrainian entrepreneurs who have suffered during the war",
+    githubUrl: "",
+    deployed: "",
+    technologies: ["Webflow"],
+  },
   {
     id: "rnweather",
     imgSrc: RNWeatherAppSrc,
@@ -55,18 +77,7 @@ const projectsData: Projects[] = [
   {
     id: "lookupng",
     name: "LookUpNg",
-    imgSrc: CakeCalcReactAppImgSrc,
-    description:
-      "LookUpNg is an application that uses the Skyscanner API to search for the cheapest flight connections between cities. In addition, it provides weather information for the destination city. The application also features a registration and login system, requiring users to be logged in to access the website",
-    githubUrl: "https://github.com/olcolcolc/LookUpNg",
-    deployed: "https://look-up-ng.netlify.app/",
-    technologies: ["Angular", "Typescript", "Scss", "Firebase Firestore"],
-  },
-
-  {
-    id: "inprogress",
-    name: "Currently in progress",
-    imgSrc: "",
+    imgSrc: LookUpNgSrc,
     description:
       "LookUpNg is an application that uses the Skyscanner API to search for the cheapest flight connections between cities. In addition, it provides weather information for the destination city. The application also features a registration and login system, requiring users to be logged in to access the website",
     githubUrl: "https://github.com/olcolcolc/LookUpNg",

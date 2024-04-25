@@ -26,7 +26,7 @@ const MenuTitle = styled.header`
 `;
 
 const ProjectPosition = styled.div<ProjectPositionProps>`
-  padding: 0.5rem 0;
+  padding: 1rem;
   margin: 1rem;
   display: flex;
   width: auto;
@@ -72,7 +72,7 @@ const ProjectImg = styled.img`
 
 const Info = styled.div`
   ${theme.mixins.bio()}
-  padding: 1rem;
+  padding: 0.5rem;
   letter-spacing: 0;
 `;
 
@@ -87,22 +87,9 @@ const Link = styled.a`
   flex-direction: row;
   align-items: center;
 
-  &::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 8px;
-    height: 1px;
-    width: 52%;
-    background: currentColor;
-    transform: scaleX(0);
-    transform-origin: right;
+  &:hover {
     transition: transform 0.3s ease;
-  }
-
-  &:hover::after {
-    transform: scaleX(1);
-    transform-origin: right;
+    text-decoration: underline;
   }
 `;
 
@@ -153,13 +140,16 @@ function Projects() {
             </ProjectsName>
             <Info>{project.description}</Info>
             <div style={{ flexDirection: "column" }}>
-              <Link href={project.githubUrl}>
-                explore the code on github
-                <ArrowIcon
-                  icon={faChevronLeft}
-                  isHovered={hoveredProjectId === project.id}
-                />
-              </Link>
+              {project.githubUrl && (
+                <Link href={project.githubUrl}>
+                  explore the code on github
+                  <ArrowIcon
+                    icon={faChevronLeft}
+                    isHovered={hoveredProjectId === project.id}
+                  />
+                </Link>
+              )}
+
               {project.deployed && (
                 <Link href={project.deployed}>
                   or check the deployed version
