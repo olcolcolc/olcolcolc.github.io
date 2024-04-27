@@ -4,6 +4,7 @@ import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Education from "./pages/education/Education";
 import Projects from "./pages/projects/Projects";
+import Experience from "./pages/experience/Experience";
 
 const MainDiv = styled.div`
   display: flex;
@@ -27,6 +28,9 @@ function App() {
         </div>
         <div id="Projects">
           <Projects />
+        </div>
+        <div id="Experience">
+          <Experience />
         </div>
       </ScrollableDiv>
     </MainDiv>
