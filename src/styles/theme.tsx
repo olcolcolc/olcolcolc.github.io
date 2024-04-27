@@ -5,6 +5,7 @@ const colors = {
   black: "#000000",
   darkFont: "rgba(207, 221, 251, 0.724);",
   background: "#161f38",
+  orange: "#bd5814",
 };
 
 const fontSize = {

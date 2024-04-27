@@ -21,6 +21,15 @@ const MenuTitle = styled.header`
   ${theme.mixins.defaultTransition}
 `;
 
+const ExperienceBio = styled.p`
+  ${theme.mixins.bio()}
+`;
+
+const Important = styled.p`
+  color: ${theme.colors.orange};
+  font-weight: 700;
+`;
+
 const ExpPosition = styled.div<ExpPositionProps>`
   padding: 0.5rem 0;
   margin: 1rem;
@@ -80,6 +89,27 @@ function Education() {
   return (
     <ExperienceDiv>
       <MenuTitle>EXPERIENCE</MenuTitle>
+      <ExperienceBio>
+        My professional experience story is quite specific. During my studies, I
+        discovered that my passion lies in pastry making. I pursued knowledge in
+        this field independently while working as a pastry chef, all while not
+        giving up on my studies. I have been involved in pastry making for over
+        10 years - currently, I work as the head of the pastry section in a
+        well-known restaurant in Wroclaw. This experience has shaped me into a
+        hardworking, patient, organized, responsible, flexible, and capable
+        individual able to work under time pressure. I've also learned how to
+        seek knowledge and develop independently.
+        <Important>
+          I see a lot of commonalities between programming and working in a
+          programming team and working in a pastry shop - something I'd be happy
+          to talk about.
+        </Important>
+        I am convinced that the skills and traits I've gained during my
+        professional experience are also crucial for effective work in a
+        programming team. I'm constantly gaining experience working in
+        programming teams through my involvement in project groups I've joined
+        through Dare IT.
+      </ExperienceBio>
       {experienceData.map((exp, index) => (
         <ExpPosition
           key={index}
