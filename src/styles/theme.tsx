@@ -4,7 +4,8 @@ const colors = {
   white: "#ffffff",
   black: "#000000",
   darkFont: "rgba(207, 221, 251, 0.724);",
-  background: "#161f38",
+  background: "#292c34",
+  orange: "#bd5814",
 };
 
 const fontSize = {

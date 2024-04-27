@@ -16,9 +16,10 @@ const HomeContainer = styled.div`
 
 const Avatar = styled.img`
   margin-top: 2rem;
-  width: 200px;
-  height: 200px;
+  width: 300px;
+  height: 300px;
   border-radius: 50%;
+  object-fit: cover;
 `;
 
 const List = styled.ul`
