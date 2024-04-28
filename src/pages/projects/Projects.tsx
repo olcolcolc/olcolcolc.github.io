@@ -4,11 +4,11 @@ import Tech from "../../components/tech/Tech";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import { keyframes } from "@emotion/react";
+import { css, keyframes } from "@emotion/react";
 import projectsData from "../../data/ProjectsData";
 
-type ProjectsNameProps = {
-  isHovered: boolean;
+type HoveredProps = {
+  ishovered: string;
 };
 
 type ProjectPositionProps = {
@@ -49,12 +49,13 @@ const DetailsDiv = styled.div`
   width: 60%;
 `;
 
-const ProjectsName = styled.p<ProjectsNameProps>`
+const ProjectsName = styled.p<HoveredProps>`
   font-family: ${theme.fonts.montserrat};
   font-size: larger;
   font-weight: 700;
   padding: 0.5rem;
-  color: ${(props) => (props.isHovered ? "orange" : theme.colors.darkFont)};
+  color: ${(props) =>
+    props.ishovered === "true" ? "orange" : theme.colors.darkFont};
   transition: color 0.3s ease;
 `;
 
@@ -98,6 +99,7 @@ const move = keyframes`
     transform: translateX(0);
   }
   100% {
+
     transform: translateX(10px);
   }
 `;
@@ -113,12 +115,17 @@ const Technology = styled.ul`
   font-family: ${theme.fonts.montserrat};
 `;
 
-const ArrowIcon = styled(FontAwesomeIcon)<ProjectsNameProps>`
+const ArrowIcon = styled(FontAwesomeIcon)<HoveredProps>`
   transform: translateY(-50%);
-  opacity: ${(props) => (props.isHovered ? 1 : 0)};
+  opacity: ${(props) => (props.ishovered === "true" ? 1 : 0)};
   transition: opacity 0.3s ease;
   padding-left: 0.5rem;
-  animation: ${move} 0.5s ease-in infinite alternate;
+  animation: ${(props) =>
+    props.ishovered
+      ? css`
+          ${move} 0.5s ease-in infinite alternate
+        `
+      : "none"};
 `;
 
 function Projects() {
@@ -135,7 +142,10 @@ function Projects() {
           {project.imgSrc && <ProjectImg src={project.imgSrc}></ProjectImg>}
 
           <DetailsDiv>
-            <ProjectsName isHovered={hoveredProjectId === project.id} as="div">
+            <ProjectsName
+              ishovered={(hoveredProjectId === project.id).toString()}
+              as="div"
+            >
               {project.name}
             </ProjectsName>
             <Info>{project.description}</Info>
@@ -145,7 +155,7 @@ function Projects() {
                   explore the code on github
                   <ArrowIcon
                     icon={faChevronLeft}
-                    isHovered={hoveredProjectId === project.id}
+                    ishovered={(hoveredProjectId === project.id).toString()}
                   />
                 </Link>
               )}
@@ -155,7 +165,7 @@ function Projects() {
                   or check the deployed version
                   <ArrowIcon
                     icon={faChevronLeft}
-                    isHovered={hoveredProjectId === project.id}
+                    ishovered={(hoveredProjectId === project.id).toString()}
                   />
                 </Link>
               )}
