@@ -1,9 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import App from "./App.tsx";
+import App from "./App.js";
 import "./index.css";
-import { theme } from "./styles/theme.tsx";
-import { Theme as ThemeType } from "./styles/theme.tsx";
+import { theme } from "./styles/theme.js";
+import { Theme as ThemeType } from "./styles/theme.js";
 import { ThemeProvider } from "@emotion/react";
 declare module "@emotion/react" {
   // eslint-disable-next-line
