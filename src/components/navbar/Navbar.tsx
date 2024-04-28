@@ -101,6 +101,7 @@ function Navbar() {
         <Menu>
           {["About", "Education", "Projects", "Experience"].map((link) => (
             <Link
+              key={link}
               activeClass="active"
               to={link}
               spy={true}
