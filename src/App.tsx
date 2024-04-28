@@ -5,6 +5,7 @@ import Home from "./pages/home/Home";
 import Education from "./pages/education/Education";
 import Projects from "./pages/projects/Projects";
 import Experience from "./pages/experience/Experience";
+import Torch from "./components/torch/Torch";
 
 const MainDiv = styled.div`
   display: flex;
@@ -18,6 +19,7 @@ const ScrollableDiv = styled.div`
 function App() {
   return (
     <MainDiv>
+      <Torch />
       <Navbar />
       <ScrollableDiv>
         <div id="About">
