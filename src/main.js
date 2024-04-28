@@ -1,9 +1,9 @@
 /* global React */
 
 import ReactDOM from "react-dom";
-import App from "./App.jsx";
+import App from "./App.js";
 import "./index.css";
-import { theme } from "./styles/theme.jsx";
+import { theme } from "./styles/theme.js";
 import { ThemeProvider } from "@emotion/react";
 
 ReactDOM.render(
