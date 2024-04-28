@@ -6,10 +6,14 @@ import Education from "./pages/education/Education";
 import Projects from "./pages/projects/Projects";
 import Experience from "./pages/experience/Experience";
 import Torch from "./components/torch/Torch";
+import { theme } from "./styles/theme";
 
 const MainDiv = styled.div`
   display: flex;
   flex-direction: row;
+  ${theme.mixins.forDesktop(`
+    display: column;
+  `)}
 `;
 
 const ScrollableDiv = styled.div`
