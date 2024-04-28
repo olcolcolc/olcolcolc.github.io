@@ -21,7 +21,7 @@ const MenuTitle = styled.header`
   ${theme.mixins.defaultTransition}
 `;
 
-const ExperienceBio = styled.p`
+const ExperienceBio = styled.div`
   ${theme.mixins.bio()}
 `;
 
