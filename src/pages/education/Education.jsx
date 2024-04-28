@@ -1,4 +1,3 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import styled from "@emotion/styled";
 import { useState } from "react";
 import { theme } from "../../styles/theme";
@@ -59,6 +58,18 @@ const Info = styled.div `
 `;
 function Education() {
     const [hoveredPosition, setHoveredPosition] = useState(null);
-    return (_jsxs(EducationDiv, { children: [_jsx(MenuTitle, { children: "EDUCATION" }), educationData.map((edu, index) => (_jsxs(CvPosition, { onMouseEnter: () => setHoveredPosition(index), onMouseLeave: () => setHoveredPosition(null), children: [_jsx(Years, { children: edu.years }), _jsxs(SchoolCourseDiv, { children: [_jsx(Course, { isHovered: hoveredPosition === index, as: "p", children: edu.course }), _jsx(School, { children: edu.school }), _jsx(Info, { children: edu.info })] })] }, index)))] }));
+    return (<EducationDiv>
+      <MenuTitle>EDUCATION</MenuTitle>
+      {educationData.map((edu, index) => (<CvPosition key={index} onMouseEnter={() => setHoveredPosition(index)} onMouseLeave={() => setHoveredPosition(null)}>
+          <Years>{edu.years}</Years>
+          <SchoolCourseDiv>
+            <Course isHovered={hoveredPosition === index} as="p">
+              {edu.course}
+            </Course>
+            <School>{edu.school}</School>
+            <Info>{edu.info}</Info>
+          </SchoolCourseDiv>
+        </CvPosition>))}
+    </EducationDiv>);
 }
 export default Education;

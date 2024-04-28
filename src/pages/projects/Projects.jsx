@@ -1,4 +1,3 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import styled from "@emotion/styled";
 import { theme } from "../../styles/theme";
 import Tech from "../../components/tech/Tech";
@@ -103,6 +102,32 @@ const ArrowIcon = styled(FontAwesomeIcon) `
 `;
 function Projects() {
     const [hoveredProjectId, setHoveredProjectId] = useState(null);
-    return (_jsxs(ProjectsDiv, { children: [_jsx(MenuTitle, { children: "Projects" }), projectsData.map((project) => (_jsxs(ProjectPosition, { onMouseEnter: () => setHoveredProjectId(project.id), onMouseLeave: () => setHoveredProjectId(null), children: [project.imgSrc && _jsx(ProjectImg, { src: project.imgSrc }), _jsxs(DetailsDiv, { children: [_jsx(ProjectsName, { isHovered: hoveredProjectId === project.id, as: "div", children: project.name }), _jsx(Info, { children: project.description }), _jsxs("div", { style: { flexDirection: "column" }, children: [project.githubUrl && (_jsxs(Link, { href: project.githubUrl, target: "_blank", children: ["explore the code on github", _jsx(ArrowIcon, { icon: faChevronLeft, isHovered: hoveredProjectId === project.id })] })), project.deployed && (_jsxs(Link, { href: project.deployed, target: "_blank", children: ["or check the deployed version", _jsx(ArrowIcon, { icon: faChevronLeft, isHovered: hoveredProjectId === project.id })] }))] }), " ", _jsx(Technology, { children: project.technologies.map((tech) => (_jsx(Tech, { children: tech }, tech))) })] })] }, project.id)))] }));
+    return (<ProjectsDiv>
+      <MenuTitle>Projects</MenuTitle>
+      {projectsData.map((project) => (<ProjectPosition key={project.id} onMouseEnter={() => setHoveredProjectId(project.id)} onMouseLeave={() => setHoveredProjectId(null)}>
+          {project.imgSrc && <ProjectImg src={project.imgSrc}></ProjectImg>}
+
+          <DetailsDiv>
+            <ProjectsName isHovered={hoveredProjectId === project.id} as="div">
+              {project.name}
+            </ProjectsName>
+            <Info>{project.description}</Info>
+            <div style={{ flexDirection: "column" }}>
+              {project.githubUrl && (<Link href={project.githubUrl} target="_blank">
+                  explore the code on github
+                  <ArrowIcon icon={faChevronLeft} isHovered={hoveredProjectId === project.id}/>
+                </Link>)}
+
+              {project.deployed && (<Link href={project.deployed} target="_blank">
+                  or check the deployed version
+                  <ArrowIcon icon={faChevronLeft} isHovered={hoveredProjectId === project.id}/>
+                </Link>)}
+            </div>{" "}
+            <Technology>
+              {project.technologies.map((tech) => (<Tech key={tech}>{tech}</Tech>))}
+            </Technology>
+          </DetailsDiv>
+        </ProjectPosition>))}
+    </ProjectsDiv>);
 }
 export default Projects;

@@ -1,6 +1,6 @@
-import { jsx as _jsx } from "react/jsx-runtime";
 import styled from "@emotion/styled";
 import { theme } from "../../styles/theme";
+import React from "react";
 const CvPositionStyled = styled.div `
   padding: 1rem;
   margin-top: 1rem;
@@ -19,6 +19,6 @@ const CvPositionStyled = styled.div `
   }
 `;
 const CvPosition = ({ children }) => {
-    return _jsx(CvPositionStyled, { children: children });
+    return <CvPositionStyled>{children}</CvPositionStyled>;
 };
 export default CvPosition;

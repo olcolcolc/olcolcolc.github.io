@@ -1,9 +1,9 @@
 import React from "react";
-import ReactDOM from "react-dom/client";
-import App from "./App.js";
+import ReactDOM from "react-dom";
+import App from "./App.tsx";
 import "./index.css";
-import { theme } from "./styles/theme.js";
-import { Theme as ThemeType } from "./styles/theme.js";
+import { theme } from "./styles/theme.tsx";
+import { Theme as ThemeType } from "./styles/theme.tsx";
 import { ThemeProvider } from "@emotion/react";
 declare module "@emotion/react" {
   // eslint-disable-next-line
@@ -12,10 +12,11 @@ declare module "@emotion/react" {
 
 // Remember, every time you make changes to your TypeScript code, you need to compile it again by running tsc.
 
-ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
+ReactDOM.render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
       <App />
     </ThemeProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
+  document.getElementById("root")
 );

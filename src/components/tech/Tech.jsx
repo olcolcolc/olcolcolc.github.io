@@ -1,7 +1,7 @@
-import { jsx as _jsx } from "react/jsx-runtime";
 import styled from "@emotion/styled";
 import { theme } from "../../styles/theme";
-const TechDiv = styled.div `
+
+const TechDiv = styled.div`
   display: flex;
   color: orange;
   padding: 0.5rem 1rem;
@@ -15,6 +15,6 @@ const TechDiv = styled.div `
   ${theme.mixins.defaultTransition}
 `;
 const Tech = ({ children }) => {
-    return _jsx(TechDiv, { children: children });
+  return <TechDiv>{children}</TechDiv>;
 };
 export default Tech;

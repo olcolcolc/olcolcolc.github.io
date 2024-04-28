@@ -1,13 +1,12 @@
-import { jsx as _jsx, jsxs as _jsxs } from "react/jsx-runtime";
 import { theme } from "../../styles/theme";
 import styled from "@emotion/styled";
-import Text from "../../components/text/Text";
+import Text from "../text/Text";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { Icon } from "../icon/Icon";
 import { css } from "@emotion/react";
 import { useState } from "react";
 import { Link } from "react-scroll";
-const NavbarDiv = styled.nav `
+const NavbarDiv = styled.nav`
   width: 100%;
   height: 100vh;
   display: flex;
@@ -20,16 +19,16 @@ const NavbarDiv = styled.nav `
   top: 0;
   z-index: 1;
 `;
-const Header = styled.header `
+const Header = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
 `;
-const Menu = styled.ul `
+const Menu = styled.ul`
   margin: 0;
   padding: 0.9rem 0 0 0;
 `;
-const MenuLink = styled.li `
+const MenuLink = styled.li`
   position: relative;
   list-style-type: none;
   text-transform: uppercase;
@@ -59,8 +58,9 @@ const MenuLink = styled.li `
     }
   }
 
-  ${({ isActive }) => isActive &&
-    css `
+  ${({ isActive }) =>
+    isActive &&
+    css`
       color: ${theme.colors.white};
 
       &:after {
@@ -69,7 +69,7 @@ const MenuLink = styled.li `
       }
     `}
 `;
-const IconsDiv = styled.div `
+const IconsDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -77,10 +77,53 @@ const IconsDiv = styled.div `
   color: ${theme.colors.darkFont};
 `;
 function Navbar() {
-    const [subtitle] = useTypewriter({
-        words: ["frontend developer"],
-    });
-    const [activeLink, setActiveLink] = useState(null);
-    return (_jsxs(NavbarDiv, { children: [_jsxs(Header, { children: [_jsx(Text, { variant: "title", children: "Aleksandra Czyrnek" }), _jsxs(Text, { variant: "subtitle", children: [subtitle, _jsx("span", { style: { color: "orange" }, children: _jsx(Cursor, {}) })] }), _jsx(Menu, { children: ["About", "Education", "Projects", "Experience"].map((link) => (_jsx(Link, { activeClass: "active", to: link, spy: true, smooth: "easeInOutQuart", offset: -70, duration: 1000, children: _jsx(MenuLink, { isActive: activeLink === link, onClick: () => setActiveLink(link), children: link }, link) }))) })] }), _jsxs(IconsDiv, { children: [_jsx("a", { href: "https://www.linkedin.com/in/aleksandraczyrnek/", target: "_blank", children: _jsx(Icon, { name: "linkedin" }) }), _jsx("a", { href: "https://www.github.com/olcolcolc", target: "_blank", children: _jsx(Icon, { name: "github" }) })] })] }));
+  const [subtitle] = useTypewriter({
+    words: ["frontend developer"],
+  });
+  const [activeLink, setActiveLink] = useState(null);
+  return (
+    <NavbarDiv>
+      <Header>
+        <Text variant="title">Aleksandra Czyrnek</Text>
+        <Text variant="subtitle">
+          {subtitle}
+          <span style={{ color: "orange" }}>
+            <Cursor />
+          </span>
+        </Text>
+        <Menu>
+          {["About", "Education", "Projects", "Experience"].map((link) => (
+            <Link
+              activeClass="active"
+              to={link}
+              spy={true}
+              smooth="easeInOutQuart"
+              offset={-70}
+              duration={1000}
+            >
+              <MenuLink
+                key={link}
+                isActive={activeLink === link}
+                onClick={() => setActiveLink(link)}
+              >
+                {link}
+              </MenuLink>
+            </Link>
+          ))}
+        </Menu>
+      </Header>
+      <IconsDiv>
+        <a
+          href="https://www.linkedin.com/in/aleksandraczyrnek/"
+          target="_blank"
+        >
+          <Icon name="linkedin" />
+        </a>
+        <a href="https://www.github.com/olcolcolc" target="_blank">
+          <Icon name="github" />
+        </a>
+      </IconsDiv>
+    </NavbarDiv>
+  );
 }
 export default Navbar;
