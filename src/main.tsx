@@ -10,6 +10,8 @@ declare module "@emotion/react" {
   interface Theme extends ThemeType {}
 }
 
+// Remember, every time you make changes to your TypeScript code, you need to compile it again by running tsc.
+
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <ThemeProvider theme={theme}>
