@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import styled from "@emotion/styled";
-import { theme } from "../../styles/theme";
-import { keyframes } from "@emotion/react";
 
 const TorchContainer = styled.div`
   position: fixed;
