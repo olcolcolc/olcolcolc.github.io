@@ -14,6 +14,9 @@ const TechDiv = styled.div`
   justify-content: center;
   white-space: nowrap;
   ${theme.mixins.defaultTransition}
+  ${theme.mixins.forMobiles(`
+      padding: 0.5rem 0.5rem;
+  `)}
 `;
 
 const Tech: React.FC<{ children: React.ReactNode }> = ({ children }) => {

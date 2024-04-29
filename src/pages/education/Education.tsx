@@ -18,11 +18,10 @@ const EducationDiv = styled.div`
 
 const MenuTitle = styled.header`
   ${theme.mixins.menuTitle()}
-  ${theme.mixins.defaultTransition}
 `;
 
 const CvPosition = styled.div<CvPositionProps>`
-  padding: 0.5rem 0;
+  padding: 1rem 0;
   margin: 1rem;
   display: flex;
   justify-content: center;
@@ -36,6 +35,11 @@ const CvPosition = styled.div<CvPositionProps>`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 0 solid #e5e7eb;
   }
+  ${theme.mixins.forTablets(`
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem;
+  `)}
 `;
 
 const Years = styled.p`
@@ -47,6 +51,10 @@ const Years = styled.p`
   color: ${theme.colors.darkFont};
   font-family: ${theme.fonts.montserrat};
   width: 9rem;
+  ${theme.mixins.forTablets(`
+    width: 100%;
+    padding: 0.5rem 2rem;
+  `)}
 `;
 
 const Course = styled.p<CourseProps>`
@@ -66,12 +74,15 @@ const School = styled.p`
 const SchoolCourseDiv = styled.div`
   flex-direction: column;
   width: 60%;
+  ${theme.mixins.forTablets(`
+    width: 100%;
+  `)}
 `;
 
 const Info = styled.div`
-  ${theme.mixins.bio()}
   padding: 0.5rem;
   letter-spacing: 0;
+  text-align: left;
 `;
 
 function Education() {
