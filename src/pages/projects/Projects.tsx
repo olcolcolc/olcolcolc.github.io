@@ -31,7 +31,7 @@ const ProjectPosition = styled.div<ProjectPositionProps>`
   display: flex;
   width: auto;
   justify-content: center;
-  flex-direction: row;
+  flex-direction: column;
   opacity: 1;
   ${theme.mixins.defaultTransition}
 
@@ -42,16 +42,28 @@ const ProjectPosition = styled.div<ProjectPositionProps>`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 0 solid #e5e7eb;
   }
+  ${theme.mixins.forMobiles(`
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem 1rem;
+    margin: 0;
+  `)}
 `;
 
 const DetailsDiv = styled.div`
-  flex-direction: column;
-  width: 60%;
+  display: flex;
+  flex-direction: row;
+  padding: 0 0.5rem;
+  ${theme.mixins.forMobiles(`
+      flex-direction: column;
+      align-items: center;
+  `)}
 `;
 
 const ProjectsName = styled.p<HoveredProps>`
   font-family: ${theme.fonts.montserrat};
   font-size: larger;
+  text-align: center;
   font-weight: 700;
   padding: 0.5rem;
   color: ${(props) =>
@@ -60,21 +72,28 @@ const ProjectsName = styled.p<HoveredProps>`
 `;
 
 const ProjectImg = styled.img`
-  width: 40%;
+  width: 200px;
   height: auto;
   padding: 1rem;
+  align-self: flex-start;
   border-radius: 20px;
   filter: brightness(0.5);
   transition: filter 0.3s ease;
+  object-fit: contain;
   &:hover {
     filter: brightness(0.9);
   }
+  ${theme.mixins.forMobiles(`
+    justify-self: center;
+    width: 300px;
+  `)}
 `;
 
 const Info = styled.div`
-  ${theme.mixins.bio()}
-  padding: 0.5rem;
+  padding: 0.5rem 0.5rem;
   letter-spacing: 0;
+  text-align: left;
+  color: ${theme.colors.white};
 `;
 
 const Link = styled.a`
@@ -139,17 +158,23 @@ function Projects() {
           onMouseEnter={() => setHoveredProjectId(project.id)}
           onMouseLeave={() => setHoveredProjectId(null)}
         >
-          {project.imgSrc && <ProjectImg src={project.imgSrc}></ProjectImg>}
-
+          <ProjectsName
+            ishovered={(hoveredProjectId === project.id).toString()}
+            as="div"
+          >
+            {project.name}
+          </ProjectsName>
+          {/* left side */}
           <DetailsDiv>
-            <ProjectsName
-              ishovered={(hoveredProjectId === project.id).toString()}
-              as="div"
+            <div
+              className="img"
+              style={{ display: "flex", justifySelf: "center" }}
             >
-              {project.name}
-            </ProjectsName>
-            <Info>{project.description}</Info>
+              {project.imgSrc && <ProjectImg src={project.imgSrc}></ProjectImg>}
+            </div>
+            {/* right side */}
             <div style={{ flexDirection: "column" }}>
+              <Info>{project.description}</Info>
               {project.githubUrl && (
                 <Link href={project.githubUrl} target="_blank">
                   explore the code on github
@@ -169,12 +194,12 @@ function Projects() {
                   />
                 </Link>
               )}
-            </div>{" "}
-            <Technology>
-              {project.technologies.map((tech) => (
-                <Tech key={tech}>{tech}</Tech>
-              ))}
-            </Technology>
+              <Technology>
+                {project.technologies.map((tech) => (
+                  <Tech key={tech}>{tech}</Tech>
+                ))}
+              </Technology>
+            </div>
           </DetailsDiv>
         </ProjectPosition>
       ))}

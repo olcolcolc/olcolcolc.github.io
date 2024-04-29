@@ -11,7 +11,7 @@ const NavbarDiv = styled.nav`
   width: 100%;
   height: 100vh;
   display: flex;
-  padding: 6rem;
+  padding: 5rem;
   justify-content: space-between;
   flex-direction: column;
   transition: 0.5s ease-in;
@@ -19,6 +19,11 @@ const NavbarDiv = styled.nav`
   position: sticky;
   top: 0;
   z-index: 1;
+  ${theme.mixins.forTablets(`
+      height: auto;
+      padding: 2.5rem;
+      position: static;
+  `)}
 `;
 
 const Header = styled.header`
@@ -59,6 +64,9 @@ const MenuLink = styled.li<{ isActive: boolean }>`
     &:after {
       width: 100%;
       color: ${theme.colors.white};
+      ${theme.mixins.forTablets(`
+        width: 14rem;
+      `)}
     }
   }
 
@@ -71,6 +79,9 @@ const MenuLink = styled.li<{ isActive: boolean }>`
         width: 100%;
         color: ${theme.colors.white};
       }
+      ${theme.mixins.forTablets(`
+        width: 14rem;
+      `)}
     `}
 `;
 
@@ -80,6 +91,11 @@ const IconsDiv = styled.div`
   align-items: center;
   justify-content: center;
   color: ${theme.colors.darkFont};
+  padding: 6rem;
+  ${theme.mixins.forTablets(`
+      justify-content: flex-start;
+      padding: 1.5rem;
+  `)}
 `;
 
 function Navbar() {

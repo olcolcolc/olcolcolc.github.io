@@ -25,11 +25,16 @@ const fonts = {
 };
 
 const mixins = {
-  forDesktop: (content: string) => `
-      @media screen and (min-width: 601px) {
+  forTablets: (content: string) => `
+      @media screen and (max-width: 1000px) {
         ${content}
       }
     `,
+  forMobiles: (content: string) => `
+    @media screen and (max-width: 640px) {
+      ${content}
+    }
+  `,
   defaultTransition: () => `
       transition: all 0.3s ease-in-out;
     `,

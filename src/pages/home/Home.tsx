@@ -12,6 +12,14 @@ import {
 
 const HomeContainer = styled.div`
   ${theme.mixins.home()}
+  ${theme.mixins.forTablets(`
+        padding: 0;
+      `)}
+`;
+
+const MenuTitle = styled.header`
+  ${theme.mixins.menuTitle()}
+  ${theme.mixins.defaultTransition}
 `;
 
 const Avatar = styled.img`
@@ -22,21 +30,24 @@ const Avatar = styled.img`
   object-fit: cover;
 `;
 
-const List = styled.ul`
-  list-style-type: none;
-`;
-
 const Technology = styled.li`
   display: flex;
   flex-direction: row;
+  justify-content: flex-start;
   padding: 0.25rem 0;
+`;
+
+const TechnologiesColumn = styled.li`
+  ${theme.mixins.bio()}
+  list-style-type: none;
+  padding: 1rem;
 `;
 
 const TechnologiesDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  @media screen and (max-width: 650px) {
+  @media screen and (max-width: 1140px) {
     flex-direction: column;
   }
 `;
@@ -44,6 +55,7 @@ const TechnologiesDiv = styled.div`
 function Home() {
   return (
     <HomeContainer>
+      <MenuTitle>About</MenuTitle>
       <Avatar src={myAvatar} aria-label="my avatar" />
       <Text variant="bio">
         Hello, <br />
@@ -58,26 +70,22 @@ function Home() {
       </Text>
       <FontAwesomeIcon icon={faArrowDown} />
       <TechnologiesDiv>
-        <Text variant="bio">
+        <TechnologiesColumn>
           <Text variant="subtitle">technologies I know</Text>
-          <List>
-            {technologiesIKnow.map((tech) => (
-              <Technology key={tech.name}>
-                <Icon name={tech.name} /> {tech.label}
-              </Technology>
-            ))}
-          </List>
-        </Text>
-        <Text variant="bio">
+          {technologiesIKnow.map((tech) => (
+            <Technology key={tech.name}>
+              <Icon name={tech.name} /> {tech.label}
+            </Technology>
+          ))}
+        </TechnologiesColumn>
+        <TechnologiesColumn>
           <Text variant="subtitle">technologies I'm learning</Text>
-          <List>
-            {technologiesImLearning.map((tech) => (
-              <Technology key={tech.name}>
-                <Icon name={tech.name} /> {tech.label}
-              </Technology>
-            ))}
-          </List>
-        </Text>
+          {technologiesImLearning.map((tech) => (
+            <Technology key={tech.name}>
+              <Icon name={tech.name} /> {tech.label}
+            </Technology>
+          ))}
+        </TechnologiesColumn>
       </TechnologiesDiv>
     </HomeContainer>
   );

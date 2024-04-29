@@ -11,13 +11,16 @@ import { theme } from "./styles/theme";
 const MainDiv = styled.div`
   display: flex;
   flex-direction: row;
-  ${theme.mixins.forDesktop(`
-    display: column;
+  ${theme.mixins.forTablets(`
+    flex-direction: column;
   `)}
 `;
 
 const ScrollableDiv = styled.div`
   flex-direction: column;
+  ${theme.mixins.forTablets(`
+    width: 100%;
+  `)}
 `;
 
 function App() {

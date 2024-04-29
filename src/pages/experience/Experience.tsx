@@ -18,11 +18,10 @@ const ExperienceDiv = styled.div`
 
 const MenuTitle = styled.header`
   ${theme.mixins.menuTitle()}
-  ${theme.mixins.defaultTransition}
 `;
 
 const ExperienceBio = styled.div`
-  ${theme.mixins.bio()}
+  padding: 2rem;
 `;
 
 const Important = styled.p`
@@ -45,6 +44,11 @@ const ExpPosition = styled.div<ExpPositionProps>`
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 0 solid #e5e7eb;
   }
+
+  ${theme.mixins.forMobiles(`
+    flex-direction: column;
+    align-items: center;
+  `)}
 `;
 
 const Years = styled.p`
@@ -56,6 +60,10 @@ const Years = styled.p`
   color: ${theme.colors.darkFont};
   font-family: ${theme.fonts.montserrat};
   width: 9rem;
+  ${theme.mixins.forTablets(`
+    width: 100%;
+    padding: 0 2rem;
+  `)}
 `;
 
 const Role = styled.p<RoleProps>`
@@ -75,6 +83,10 @@ const Company = styled.p`
 const SchoolCourseDiv = styled.div`
   flex-direction: column;
   width: 60%;
+  ${theme.mixins.forTablets(`
+    width: 100%;
+    padding: 0 2rem;
+  `)}
 `;
 
 const Info = styled.div`
