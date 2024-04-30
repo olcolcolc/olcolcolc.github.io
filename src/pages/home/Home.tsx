@@ -20,6 +20,9 @@ const HomeContainer = styled.div`
 const MenuTitle = styled.header`
   ${theme.mixins.menuTitle()}
   ${theme.mixins.defaultTransition}
+  ${theme.mixins.forTablets(`
+        display: none;
+      `)}
 `;
 
 const Avatar = styled.img`
@@ -28,6 +31,13 @@ const Avatar = styled.img`
   height: 300px;
   border-radius: 50%;
   object-fit: cover;
+`;
+
+const Bio = styled.div`
+  ${theme.mixins.bio()}
+  ${theme.mixins.forMobiles(`
+        padding: 1rem;
+      `)}
 `;
 
 const Technology = styled.li`
@@ -57,7 +67,7 @@ function Home() {
     <HomeContainer>
       <MenuTitle>About</MenuTitle>
       <Avatar src={myAvatar} aria-label="my avatar" />
-      <Text variant="bio">
+      <Bio>
         Hello, <br />
         I've spent the last 2,5 years immersing myself in coding, starting with
         Python and gradually transitioning to frontend development, which has
@@ -67,7 +77,7 @@ function Home() {
         completed Dare IT mentoring program and enhanced my skills with a
         mentor. Currently, I'm involved in two group projects. Feel free to
         check out my portfolio!
-      </Text>
+      </Bio>
       <FontAwesomeIcon icon={faArrowDown} />
       <TechnologiesDiv>
         <TechnologiesColumn>
