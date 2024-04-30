@@ -64,7 +64,6 @@ const mixins = {
   padding: 1rem 0;
     `,
   bio: () => `
-    text-align: justify;
     color: ${colors.white};
     padding: 2rem 5rem;
     letter-spacing: 0.15em;
