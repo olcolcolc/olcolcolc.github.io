@@ -7,6 +7,7 @@ import Projects from "./pages/projects/Projects";
 import Experience from "./pages/experience/Experience";
 import Torch from "./components/torch/Torch";
 import { theme } from "./styles/theme";
+import ScrollTop from "./pages/scroll-top/ScrollTop";
 
 const MainDiv = styled.div`
   display: flex;
@@ -29,6 +30,7 @@ function App() {
       <Torch />
       <Navbar />
       <ScrollableDiv>
+        <ScrollTop />
         <div id="About">
           <Home />
         </div>
