@@ -21,7 +21,7 @@ const MenuTitle = styled.header`
 `;
 
 const CvPosition = styled.div<CvPositionProps>`
-  padding: 1rem 0;
+  padding: 1.5rem 0;
   margin: 1rem;
   display: flex;
   justify-content: center;

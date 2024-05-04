@@ -30,7 +30,7 @@ const Important = styled.p`
 `;
 
 const ExpPosition = styled.div<ExpPositionProps>`
-  padding: 0.5rem 0;
+  padding: 1.5rem 0.5rem;
   margin: 1rem;
   display: flex;
   justify-content: center;
