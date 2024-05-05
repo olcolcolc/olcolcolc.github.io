@@ -1,9 +1,20 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import styled from "@emotion/styled";
 import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { theme } from "../../styles/theme";
+import { keyframes } from "@emotion/react";
 
-const ScrollButton = styled.div`
+const fadeIn = keyframes`
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0.5;
+  }
+`;
+
+const ScrollButton = styled.button`
   position: fixed;
   bottom: 3rem;
   right: 3rem;
@@ -14,6 +25,9 @@ const ScrollButton = styled.div`
   cursor: pointer;
   z-index: 1000;
   opacity: 0.5;
+  background: transparent;
+  ${theme.mixins.defaultTransition}
+  animation: ${fadeIn} 1s ease-in-out;
   &:hover {
     opacity: 1;
   }
