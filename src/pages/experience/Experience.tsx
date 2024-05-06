@@ -112,9 +112,8 @@ function Education() {
         individual able to work under time pressure. I've also learned how to
         seek knowledge and develop independently.
         <Important>
-          I see a lot of commonalities between programming and working in a
-          programming team and working in a pastry shop - something I'd be happy
-          to talk about.
+          I see a lot of commonalities between working in a programming team and
+          working in a food industry - something I'd be happy to talk about.
         </Important>
         I am convinced that the skills and traits I've gained during my
         professional experience are also crucial for effective work in a
