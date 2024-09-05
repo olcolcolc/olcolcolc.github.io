@@ -82,6 +82,7 @@ const mixins = {
   z-index: 20;
   width: 100%;
   height: 3rem;
+  font-size: 2rem;
   background: "#161f386d",
   padding: 1.5rem;
   backdrop-filter: blur(10px);
