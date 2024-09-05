@@ -26,7 +26,7 @@ const MenuTitle = styled.header`
 `;
 
 const ProjectPosition = styled.div<ProjectPositionProps>`
-  padding: 1rem;
+  padding: 2rem;
   margin: 1rem;
   display: flex;
   width: auto;
@@ -54,6 +54,8 @@ const DetailsDiv = styled.div`
   display: flex;
   flex-direction: row;
   padding: 0 0.5rem;
+  align-items: center;
+
   ${theme.mixins.forMobiles(`
       flex-direction: column;
       align-items: center;
@@ -72,7 +74,7 @@ const ProjectsName = styled.p<HoveredProps>`
 `;
 
 const ProjectImg = styled.img`
-  width: 200px;
+  width: 250px;
   height: auto;
   padding: 1rem;
   align-self: flex-start;
@@ -165,6 +167,7 @@ function Projects() {
             {project.name}
           </ProjectsName>
           {/* left side */}
+
           <DetailsDiv>
             <div
               className="img"

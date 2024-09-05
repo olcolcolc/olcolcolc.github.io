@@ -32,8 +32,8 @@ const projectsData: Projects[] = [
     description:
       "Group volunteer project facilitated through Tech to the Rescue match - revamping the website for the Impact Business program - a support program created by a Ukrainian non-governmental organization for Ukrainian entrepreneurs who have suffered during the war",
     githubUrl: "",
-    deployed: "",
-    technologies: ["Webflow"],
+    deployed: "https://www.impactbusinessua.org/",
+    technologies: ["Webflow", "Jira"],
   },
   {
     id: "rnweather",
