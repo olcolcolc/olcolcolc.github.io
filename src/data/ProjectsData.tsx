@@ -16,8 +16,18 @@ interface Projects {
 
 const projectsData: Projects[] = [
   {
+    id: "languageapp",
+    name: "In progress: LanguageApp",
+    imgSrc: "",
+    description:
+      'A project created collaboratively with the users of the "Polskie Programistki" server. A web application designed to assist in learning foreign languages.',
+    githubUrl: "",
+    deployed: "",
+    technologies: ["Styled components", "React MUI", "Trello"],
+  },
+  {
     id: "tasker",
-    name: "In progress: Tasker",
+    name: "On hold: Tasker",
     imgSrc: "",
     description:
       "A life management tool for collaborative task organization and building healthy habits. The app will allow users to create, assign, and track tasks, as well as set deadlines and reminders. We, a few mentees from Dare IT, are writing this with the aim to develop an application that helps solve the challenges we face during career transitions and job hunting.",
@@ -27,7 +37,7 @@ const projectsData: Projects[] = [
   },
   {
     id: "tttr",
-    name: "In progress: Impact Business 2.0",
+    name: "Impact Business 2.0",
     imgSrc: tttrSrc,
     description:
       "Group volunteer project facilitated through Tech to the Rescue match - revamping the website for the Impact Business program - a support program created by a Ukrainian non-governmental organization for Ukrainian entrepreneurs who have suffered during the war",

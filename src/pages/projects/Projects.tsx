@@ -190,7 +190,7 @@ function Projects() {
 
               {project.deployed && (
                 <Link href={project.deployed} target="_blank">
-                  or check the deployed version
+                  check the deployed version
                   <ArrowIcon
                     icon={faChevronLeft}
                     ishovered={(hoveredProjectId === project.id).toString()}
