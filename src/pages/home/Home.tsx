@@ -4,7 +4,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Icon } from "../../components/icon/Icon";
 import Text from "../../components/text/Text";
-import myAvatar from "../../assets/imgs/myAvatar.jpg";
 import {
   technologiesIKnow,
   technologiesImLearning,
