@@ -22,6 +22,7 @@ const MenuTitle = styled.header`
 
 const ExperienceBio = styled.div`
   padding: 2rem;
+  font-size: 1.25rem;
 `;
 
 const Important = styled.p`
@@ -90,7 +91,6 @@ const SchoolCourseDiv = styled.div`
 `;
 
 const Info = styled.div`
-  ${theme.mixins.bio()}
   padding: 0.5rem;
   letter-spacing: 0;
 `;
