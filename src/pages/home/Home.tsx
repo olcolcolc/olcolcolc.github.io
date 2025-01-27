@@ -25,14 +25,6 @@ const MenuTitle = styled.header`
       `)}
 `;
 
-const Avatar = styled.img`
-  margin-top: 2rem;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  object-fit: cover;
-`;
-
 const Bio = styled.div`
   ${theme.mixins.bio()}
   ${theme.mixins.forMobiles(`
@@ -48,7 +40,7 @@ const Technology = styled.li`
 `;
 
 const TechnologiesColumn = styled.li`
-  ${theme.mixins.bio()}
+  font-size: 1rem;
   list-style-type: none;
   padding: 1rem;
 `;
@@ -66,7 +58,6 @@ function Home() {
   return (
     <HomeContainer>
       <MenuTitle>About</MenuTitle>
-      <Avatar src={myAvatar} aria-label="my avatar" />
       <Bio>
         Hello, <br />
         I've spent the last 2,5 years immersing myself in coding, starting with
