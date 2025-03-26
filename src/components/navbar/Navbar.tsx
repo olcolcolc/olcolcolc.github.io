@@ -43,16 +43,17 @@ const MenuLink = styled.li<{ isActive: boolean }>`
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   color: ${theme.colors.darkFont};
-  font-family: ${theme.fonts.montserrat};
+  font-family: ${theme.fonts.workSans};
   cursor: pointer;
   margin-bottom: 0.5rem;
+  font-size: 2rem;
 
   &:after {
     content: "";
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 9rem;
+    width: 15rem;
     height: 1px;
     background-color: ${theme.colors.darkFont};
     transition: width 0.3s ease-in-out;
@@ -91,7 +92,7 @@ const IconsDiv = styled.div`
   align-items: center;
   justify-content: center;
   color: ${theme.colors.darkFont};
-  padding: 6rem;
+  padding: 2rem;
   ${theme.mixins.forTablets(`
       justify-content: flex-start;
       padding: 1.5rem;

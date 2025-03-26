@@ -66,8 +66,7 @@ const mixins = {
     `,
   bio: () => `
     color: ${colors.white};
-    padding: 2rem 6rem;
-    font-size: 1.5rem;
+    font-size: 1.7rem;
     `,
   menuTitle: () => `
   color: ${colors.darkFont};
