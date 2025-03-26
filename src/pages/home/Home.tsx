@@ -59,7 +59,7 @@ function Home() {
       <MenuTitle>About</MenuTitle>
       <Bio>
         Hello, <br />
-        I've spent the last 2,5 years immersing myself in coding, starting with
+        I've spent the last 3 years immersing myself in coding, starting with
         Python and gradually transitioning to frontend development, which has
         become my passion. I completed postgraduate studies in 'Front-end
         Development with Angular' to strengthen my skills. Currently, my focus

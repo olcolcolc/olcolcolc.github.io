@@ -26,3 +26,28 @@
   src: url("../assets/fonts/BasisGrotesquePROFontFamily/BasisGrotesqueArabicPro-Regular.ttf")
     format("truetype");
 }
+
+@font-face {
+  font-family: "WorkSans-Black";
+  src: url("../assets/fonts/WorkSans/WorkSans-Black.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "WorkSans-Bold";
+  src: url("../assets/fonts/WorkSans/WorkSans-Bold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "WorkSans-Light";
+  src: url("../assets/fonts/WorkSans/WorkSans-Light.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "WorkSans-Medium";
+  src: url("../assets/fonts/WorkSans/WorkSans-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "WorkSans-Regular";
+  src: url("../assets/fonts/WorkSans/WorkSans-Regular.ttf") format("truetype");
+}
