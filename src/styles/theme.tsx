@@ -22,6 +22,7 @@ const fonts = {
   montserrat: "Montserrat, sans-serif",
   openSans: "Open Sans, sans-serif",
   roboto: "Roboto, sans-serif",
+  workSans: "WorkSans, sans-serif",
 };
 
 const mixins = {
