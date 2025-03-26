@@ -60,7 +60,7 @@ const projectsData: Projects[] = [
     name: "CakeCalc React App",
     imgSrc: CakeCalcReactAppImgSrc,
     description:
-      "The app is designed for bakers and helps calculate the price of a cake, advance payment, and determine the size of the baking pan needed to bake the sponge for the cake. It takes inputs such as the price per person, the number of people, percentage of deposit. By entering customer information, the app provides output information to be fast communicated to the customer during the cake ordering process, as well as internal information for the bakery. The language on the website can be changed to English and Polish. I collaborated with a UI designer who has redesigned the application to make it look more user friendly.",
+      "The app helps bakers calculate cake prices, advance payments, and determine the required baking pan size. It takes inputs like price per person, number of people, and deposit percentage. The app provides quick outputs for customer communication and internal bakery use. It supports both English and Polish languages. I collaborated with a UI designer to make the app more user-friendly.",
     githubUrl: "https://github.com/olcolcolc/CakeCalcReactApp",
     deployed: "https://cakecalc.netlify.app/",
     technologies: [
