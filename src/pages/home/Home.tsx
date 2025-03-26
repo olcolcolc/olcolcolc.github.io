@@ -1,15 +1,13 @@
 import { theme } from "../../styles/theme";
 import styled from "@emotion/styled";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
 import { Icon } from "../../components/icon/Icon";
-import Text from "../../components/text/Text";
 import {
   technologiesIKnow,
   technologiesImLearning,
 } from "../../data/TechStackData";
 
 const HomeContainer = styled.div`
+  font-family: ${theme.fonts.openSans};
   ${theme.mixins.home()}
   ${theme.mixins.forTablets(`
         padding: 0;
@@ -26,8 +24,16 @@ const MenuTitle = styled.header`
 
 const Bio = styled.div`
   ${theme.mixins.bio()}
+  padding: 5rem;
+  font-family: ${theme.fonts.workSans};
+
+  ${theme.mixins.forTablets(`
+        padding: 3rem;
+        font-size: 1.3rem;
+      `)}
   ${theme.mixins.forMobiles(`
         padding: 1rem;
+        margin: 2rem;
       `)}
 `;
 
@@ -36,12 +42,18 @@ const Technology = styled.li`
   flex-direction: row;
   justify-content: flex-start;
   padding: 0.25rem 0;
+  color: ${theme.colors.white};
 `;
 
 const TechnologiesColumn = styled.li`
-  font-size: 1rem;
   list-style-type: none;
   padding: 1rem;
+`;
+
+const TechnologiesTitle = styled.div`
+  font-size: 1.3rem;
+  padding-bottom: 1rem;
+  color: ${theme.colors.darkFont};
 `;
 
 const TechnologiesDiv = styled.div`
@@ -59,19 +71,18 @@ function Home() {
       <MenuTitle>About</MenuTitle>
       <Bio>
         Hello, <br />
-        I've spent the last 2,5 years immersing myself in coding, starting with
-        Python and gradually transitioning to frontend development, which has
-        become my passion. I completed postgraduate studies in 'Front-end
+        &#9; I've spent the last 3 years immersing myself in coding, starting
+        with Python and gradually transitioning to frontend development, which
+        has become my passion. I completed postgraduate studies in 'Front-end
         Development with Angular' to strengthen my skills. Currently, my focus
         is on React and TypeScript. I'm constantly learning - I've just
         completed Dare IT mentoring program and enhanced my skills with a
         mentor. Currently, I'm involved in two group projects. Feel free to
         check out my portfolio!
       </Bio>
-      <FontAwesomeIcon icon={faArrowDown} />
       <TechnologiesDiv>
         <TechnologiesColumn>
-          <Text variant="subtitle">technologies I know</Text>
+          <TechnologiesTitle>Technologies I know:</TechnologiesTitle>
           {technologiesIKnow.map((tech) => (
             <Technology key={tech.name}>
               <Icon name={tech.name} /> {tech.label}
@@ -79,7 +90,7 @@ function Home() {
           ))}
         </TechnologiesColumn>
         <TechnologiesColumn>
-          <Text variant="subtitle">technologies I'm learning</Text>
+          <TechnologiesTitle>Technologies I'm learning:</TechnologiesTitle>
           {technologiesImLearning.map((tech) => (
             <Technology key={tech.name}>
               <Icon name={tech.name} /> {tech.label}

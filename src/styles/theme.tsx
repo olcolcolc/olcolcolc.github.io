@@ -22,6 +22,7 @@ const fonts = {
   montserrat: "Montserrat, sans-serif",
   openSans: "Open Sans, sans-serif",
   roboto: "Roboto, sans-serif",
+  workSans: "WorkSans, sans-serif",
 };
 
 const mixins = {
@@ -65,14 +66,15 @@ const mixins = {
     `,
   bio: () => `
     color: ${colors.white};
-    padding: 2rem 6rem;
-    font-size: 1.5rem;
+    font-size: 1.4rem;
+
     `,
   menuTitle: () => `
   color: ${colors.darkFont};
+  font-family: ${fonts.workSans};
   font-weight: 700;
   white-space: nowrap;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   align-items: center;
   justify-content: center;
