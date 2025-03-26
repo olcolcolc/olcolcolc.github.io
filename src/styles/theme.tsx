@@ -66,13 +66,15 @@ const mixins = {
     `,
   bio: () => `
     color: ${colors.white};
-    font-size: 1.7rem;
+    font-size: 1.4rem;
+
     `,
   menuTitle: () => `
   color: ${colors.darkFont};
+  font-family: ${fonts.workSans};
   font-weight: 700;
   white-space: nowrap;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.1rem;
   text-transform: uppercase;
   align-items: center;
   justify-content: center;

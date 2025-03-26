@@ -1,7 +1,6 @@
 import { theme } from "../../styles/theme";
 import styled from "@emotion/styled";
 import { Icon } from "../../components/icon/Icon";
-import Text from "../../components/text/Text";
 import {
   technologiesIKnow,
   technologiesImLearning,
@@ -25,7 +24,13 @@ const MenuTitle = styled.header`
 
 const Bio = styled.div`
   ${theme.mixins.bio()}
-  padding: 6rem;
+  padding: 5rem;
+  font-family: ${theme.fonts.workSans};
+
+  ${theme.mixins.forTablets(`
+        padding: 3rem;
+        font-size: 1.3rem;
+      `)}
   ${theme.mixins.forMobiles(`
         padding: 1rem;
         margin: 2rem;
@@ -66,9 +71,9 @@ function Home() {
       <MenuTitle>About</MenuTitle>
       <Bio>
         Hello, <br />
-        I've spent the last 3 years immersing myself in coding, starting with
-        Python and gradually transitioning to frontend development, which has
-        become my passion. I completed postgraduate studies in 'Front-end
+        &#9; I've spent the last 3 years immersing myself in coding, starting
+        with Python and gradually transitioning to frontend development, which
+        has become my passion. I completed postgraduate studies in 'Front-end
         Development with Angular' to strengthen my skills. Currently, my focus
         is on React and TypeScript. I'm constantly learning - I've just
         completed Dare IT mentoring program and enhanced my skills with a
