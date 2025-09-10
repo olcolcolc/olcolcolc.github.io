@@ -102,24 +102,25 @@ function Education() {
     <ExperienceDiv>
       <MenuTitle>EXPERIENCE</MenuTitle>
       <ExperienceBio>
-        My professional experience story is quite specific. During my studies, I
-        discovered that my passion lies in pastry making. I pursued knowledge in
-        this field independently while working as a pastry chef, all while not
-        giving up on my studies. I have been involved in pastry making for over
-        10 years - currently, I work as the head of the pastry section in a
-        well-known restaurant in Wroclaw. This experience has shaped me into a
-        hardworking, patient, organized, responsible, flexible, and capable
-        individual able to work under time pressure. I've also learned how to
-        seek knowledge and develop independently.
+        My professional experience story is quite unique. During my studies, I
+        discovered that my passion lies in pastry making. I pursued this
+        interest independently while working as a pastry chef and eventually
+        became the head of the pastry section in a well-known restaurant in
+        Wroclaw. Over more than 10 years in the industry, I developed qualities
+        such as hard work, patience, organization, responsibility, flexibility,
+        and the ability to perform under time pressure. I also learned how to
+        seek knowledge and grow independently. At the same time, I never gave up
+        on my interest in technology. I transitioned into IT, completing
+        postgraduate studies in Frontend Development with Angular, and
+        participating in group projects through Dare IT and Tech to the Rescue.
         <Important>
-          I see a lot of commonalities between working in a programming team and
-          working in a food industry - something I'd be happy to talk about.
+          Today, I am working as a Junior Software Developer at EY, where I
+          continue to develop my skills in modern technologies and agile
+          teamwork.
         </Important>
-        I am convinced that the skills and traits I've gained during my
-        professional experience are also crucial for effective work in a
-        programming team. I'm constantly gaining experience working in
-        programming teams through my involvement in project groups I've joined
-        through Dare IT.
+        I strongly believe that the discipline, adaptability, and
+        problem-solving mindset gained from my earlier career directly support
+        my effectiveness in programming projects.
       </ExperienceBio>
       {experienceData.map((exp, index) => (
         <ExpPosition

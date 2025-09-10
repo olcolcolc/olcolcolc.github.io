@@ -16,6 +16,16 @@ interface Projects {
 
 const projectsData: Projects[] = [
   {
+    id: "dominik",
+    name: "In progress: Portfolio for a architect phd",
+    imgSrc: "",
+    description:
+      "A project for an architect, designed by me in Figma, developed in full cooperation with the client - from collecting the brief to programming it myself.",
+    githubUrl: "",
+    deployed: "",
+    technologies: ["Styled components", "React", "Typescript", "Figma"],
+  },
+  {
     id: "languageapp",
     name: "In progress: LanguageApp",
     imgSrc: "",
