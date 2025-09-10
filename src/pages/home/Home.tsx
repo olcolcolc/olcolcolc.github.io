@@ -75,10 +75,14 @@ function Home() {
         with Python and gradually transitioning to frontend development, which
         has become my passion. I completed postgraduate studies in 'Front-end
         Development with Angular' to strengthen my skills. Currently, my focus
-        is on React and TypeScript. I'm constantly learning - I've just
-        completed Dare IT mentoring program and enhanced my skills with a
-        mentor. Currently, I'm involved in two group projects. Feel free to
-        check out my portfolio!
+        is on React and TypeScript. I've completed the Dare IT mentoring
+        program, where I worked with a mentor to refine my skills, and I've also
+        contributed to group projects, including a volunteer initiative with
+        Tech to the Rescue. <br />
+        <br />
+        &#9; Today, I'm working as a Junior Software Developer at EY, where I
+        continue to grow as a developer and apply my skills in real-world
+        projects. Feel free to check out my portfolio!
       </Bio>
       <TechnologiesDiv>
         <TechnologiesColumn>
