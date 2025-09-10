@@ -31,8 +31,8 @@ const projectsData: Projects[] = [
     imgSrc: "",
     description:
       'A project created collaboratively with the users of the "Polskie Programistki" server. A web application designed to assist in learning foreign languages.',
-    githubUrl: "",
-    deployed: "",
+    githubUrl: "https://github.com/LanguageAppSpace/language-app-frontend/",
+    deployed: "https://staging-project-language-app.netlify.app/",
     technologies: ["Styled components", "React MUI", "Trello"],
   },
   {
