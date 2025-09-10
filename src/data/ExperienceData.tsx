@@ -10,7 +10,7 @@ const educationData: Experience[] = [
     years: "july 2025 - present",
     role: "Software developer",
     company: "EY GDS",
-    info: "I work on a project where I develop complete web pages and reusable components. I am responsible for implementing features, ensuring code quality, and collaborating with the team to deliver scalable solutions.",
+    info: "I work on a project where I develop complete web pages and reusable components connected with developed APIs. I am responsible for implementing features, ensuring code quality, and collaborating with the team to deliver scalable solutions. I collaborate constantly with UI/UX designers, backend developers and devops.",
   },
   {
     years: "march 2024 - march 2025",
