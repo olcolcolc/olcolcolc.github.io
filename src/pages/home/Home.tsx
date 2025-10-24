@@ -29,7 +29,6 @@ const MenuTitle = styled.header`
 const Bio = styled.div`
   ${theme.mixins.bio()}
   padding: 5rem 0;
-  font-family: ${theme.fonts.workSans};
 
   ${theme.mixins.forTablets(`
     padding: 3rem 0;

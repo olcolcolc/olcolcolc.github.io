@@ -12,6 +12,7 @@ import ScrollTop from "./pages/scroll-top/ScrollTop";
 const MainDiv = styled.div`
   display: flex;
   flex-direction: row;
+  max-width: 1600px;
   ${theme.mixins.forTablets(`
     flex-direction: column;
     padding: 1rem;

@@ -111,7 +111,12 @@ const icons: Record<string, React.FC> = {
     </svg>
   ),
   restApi: () => (
-    <svg width={techIconWidth} height={techIconWidth} viewBox="0 0 511 511">
+    <svg
+      width={techIconWidth}
+      height={techIconWidth}
+      viewBox="0 0 511 511"
+      fill="white"
+    >
       <g>
         <path
           d="M492.168,309.579l-17.626-10.177c2.96-14.723,4.458-29.466,4.458-43.902c0-14.646-1.474-29.403-4.384-43.946l17.552-10.134

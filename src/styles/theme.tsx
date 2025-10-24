@@ -24,6 +24,8 @@ const fonts = {
   openSans: "Open Sans, sans-serif",
   roboto: "Roboto, sans-serif",
   workSans: "WorkSans, sans-serif",
+  grotesqueReg: "Regular_BasisGrotesqueArabicPro",
+  grotesqueBold: "Bold_BasisGrotesqueArabicPro",
 };
 
 const mixins = {
@@ -55,11 +57,12 @@ const mixins = {
     font-size: ${fontSize.large};
     margin-top: 2rem;
     font-weight: 700;
-    font-family: ${fonts.openSans};
+    font-family: ${fonts.grotesqueReg};
     `,
 
   subtitle: () => `
   color: ${colors.darkFont};
+  font-family: ${fonts.grotesqueReg};
   overflow: hidden;
   white-space: nowrap;
   letter-spacing: 0.3em;
