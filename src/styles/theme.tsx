@@ -6,6 +6,7 @@ const colors = {
   darkFont: "rgba(207, 221, 251, 0.724);",
   background: "#292c34",
   orange: "#bd5814",
+  mainBackground: "#181721",
 };
 
 const fontSize = {

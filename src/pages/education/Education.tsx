@@ -30,7 +30,7 @@ const CvPosition = styled.div<CvPositionProps>`
 
   &:hover {
     border-radius: 0.5rem;
-    background: rgba(19, 27, 48, 0.284);
+    background: ${theme.colors.mainBackground};
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 0 solid #e5e7eb;
@@ -53,7 +53,8 @@ const Years = styled.p`
   width: 9rem;
   ${theme.mixins.forTablets(`
     width: 100%;
-    padding: 0.5rem 2rem;
+    justify-content: flex-start;
+
   `)}
 `;
 
@@ -63,6 +64,10 @@ const Course = styled.p<CourseProps>`
   padding: 0.5rem;
   color: ${(props) => (props.isHovered ? "orange" : theme.colors.darkFont)};
   transition: color 0.3s ease;
+  ${theme.mixins.forTablets(`
+    width: 100%;
+      color: ${theme.colors.orange};
+  `)}
 `;
 
 const School = styled.p`

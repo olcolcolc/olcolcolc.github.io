@@ -22,6 +22,7 @@
     "react-router-dom": "^6.22.3",
     "react-scroll": "^1.9.0",
     "react-simple-typewriter": "^5.0.1",
+    "simple-icons": "^15.17.0",
     "types": "^0.1.1"
   },
   "devDependencies": {

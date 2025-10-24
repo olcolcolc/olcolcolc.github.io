@@ -12,14 +12,21 @@ const technologiesIKnow: Technology[] = [
   { name: "angular", label: "Angular" },
   { name: "python", label: "Python" },
   { name: "sass", label: "Sass" },
-  { name: "styledComponents", label: "Styled components, Emotion" },
   { name: "retool", label: "Retool" },
+  { name: "webflow", label: "Webflow" },
+  { name: "mui", label: "MUI" },
+  { name: "swagger", label: "Swagger" },
+  { name: "azure", label: "Azure" },
+  { name: "jira", label: "Jira" },
   { name: "restApi", label: "REST API" },
-];
-
-const technologiesImLearning: Technology[] = [
-  { name: "nextjs", label: "Next.js" },
+  { name: "postman", label: "Postman" },
   { name: "react", label: "React Native" },
+  { name: "styledComponents", label: "Styled components / Emotion" },
 ];
 
-export { technologiesIKnow, technologiesImLearning };
+// const technologiesImLearning: Technology[] = [
+//   { name: "nodejs", label: "NodeJS" },
+//   { name: "mern", label: "MERN" },
+// ];
+
+export { technologiesIKnow };
