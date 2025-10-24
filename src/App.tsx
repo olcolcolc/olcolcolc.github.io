@@ -14,6 +14,7 @@ const MainDiv = styled.div`
   flex-direction: row;
   ${theme.mixins.forTablets(`
     flex-direction: column;
+    padding: 1rem;
   `)}
 `;
 
@@ -24,6 +25,10 @@ const ScrollableDiv = styled.div`
   `)}
 `;
 
+const SectionDiv = styled.div`
+  padding: 1rem 0;
+`;
+
 function App() {
   return (
     <MainDiv>
@@ -31,18 +36,18 @@ function App() {
       <Navbar />
       <ScrollableDiv>
         <ScrollTop />
-        <div id="About">
+        <SectionDiv id="About">
           <Home />
-        </div>
-        <div id="Education">
+        </SectionDiv>
+        <SectionDiv id="Education">
           <Education />
-        </div>
-        <div id="Projects">
+        </SectionDiv>
+        <SectionDiv id="Projects">
           <Projects />
-        </div>
-        <div id="Experience">
+        </SectionDiv>
+        <SectionDiv id="Experience">
           <Experience />
-        </div>
+        </SectionDiv>
       </ScrollableDiv>
     </MainDiv>
   );

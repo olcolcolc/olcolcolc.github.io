@@ -88,7 +88,7 @@ const projectsData: Projects[] = [
     name: "JustMemesApp",
     imgSrc: JustMemesAppSrc,
     description:
-      "This is a Just Memes App built with React. It allows users to view and post memes to a Firebase Firestore database. Users can also vote on memes by liking or disliking them. The app consists of several components: Landing Page, Top Page, Regular Page, Theme Switcher, Post New Meme. App provides an enjoyable browsing experience for users, allowing them to explore and interact with a collection of memes. ",
+      "It allows users to view and post memes to a Firebase Firestore database. Users can also vote on memes by liking or disliking them. App provides an enjoyable browsing experience for users, allowing them to explore and interact with a collection of memes. ",
     githubUrl: "https://github.com/olcolcolc/JustMemesApp",
     deployed: "https://just-memes-app.netlify.app/",
     technologies: ["React", "Typescript", "Scss", "Firebase Firestore", "Jest"],

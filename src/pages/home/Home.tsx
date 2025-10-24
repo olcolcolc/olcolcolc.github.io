@@ -1,107 +1,183 @@
 import { theme } from "../../styles/theme";
 import styled from "@emotion/styled";
 import { Icon } from "../../components/icon/Icon";
-import {
-  technologiesIKnow,
-  technologiesImLearning,
-} from "../../data/TechStackData";
+import { technologiesIKnow } from "../../data/TechStackData";
 
 const HomeContainer = styled.div`
   font-family: ${theme.fonts.openSans};
   ${theme.mixins.home()}
   ${theme.mixins.forTablets(`
-        padding: 0;
-      `)}
+    padding: 0;
+  `)}
+`;
+
+const Section = styled.section`
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.25rem;
 `;
 
 const MenuTitle = styled.header`
   ${theme.mixins.menuTitle()}
   ${theme.mixins.defaultTransition}
   ${theme.mixins.forTablets(`
-        display: none;
-      `)}
+    display: none;
+  `)}
 `;
 
 const Bio = styled.div`
   ${theme.mixins.bio()}
-  padding: 5rem;
+  padding: 5rem 0;
   font-family: ${theme.fonts.workSans};
 
   ${theme.mixins.forTablets(`
-        padding: 3rem;
-        font-size: 1.3rem;
-      `)}
+    padding: 3rem 0;
+    font-size: 1rem;
+  `)}
   ${theme.mixins.forMobiles(`
-        padding: 1rem;
-        margin: 2rem;
-      `)}
-`;
-
-const Technology = styled.li`
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  padding: 0.25rem 0;
-  color: ${theme.colors.white};
+    padding: 1rem 0;
+    margin: 2rem 0;
+  `)}
 `;
 
 const TechnologiesColumn = styled.li`
   list-style-type: none;
-  padding: 1rem;
+  width: 100%;
 `;
 
 const TechnologiesTitle = styled.div`
-  font-size: 1.3rem;
-  padding-bottom: 1rem;
+  font-size: 1.6rem;
+  padding-bottom: 1.5rem;
   color: ${theme.colors.darkFont};
+  text-align: center;
+`;
+
+const HighlightedText = styled.span`
+  color: ${theme.colors.orange};
 `;
 
 const TechnologiesDiv = styled.div`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  @media screen and (max-width: 1140px) {
-    flex-direction: column;
+  gap: 2rem;
+`;
+
+const TechCloud = styled.ul`
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(96px, 1fr));
+  gap: 3rem;
+  padding: 0.5rem 0 2rem;
+  position: relative;
+  justify-items: center;
+  align-items: center;
+  max-width: 900px;
+  margin: 0 auto;
+  overflow: visible;
+`;
+
+const TileWrap = styled.li`
+  display: grid;
+  place-items: center;
+
+  &:nth-of-type(3n) {
+    transform: translateY(2px) rotate(-1.2deg);
   }
+  &:nth-of-type(4n) {
+    transform: translateY(-1px) rotate(1deg);
+  }
+  &:nth-of-type(5n) {
+    transform: translateX(1px) rotate(-0.8deg);
+  }
+`;
+
+const TechTile = styled.div`
+  position: relative;
+  background: ${theme.colors.mainBackground};
+  display: grid;
+  cursor: pointer;
+  padding: 0;
+  transition: transform 0.18s ease, box-shadow 0.18s ease, background 0.18s ease;
+  overflow: visible;
+
+  & > div {
+    padding-right: 0 !important;
+  }
+
+  & svg {
+    width: 32px !important;
+    height: 32px !important;
+    display: block;
+  }
+
+  &:hover .label,
+  &:focus-visible .label {
+    opacity: 1;
+    padding-top: 1.5rem;
+    transform: translate(-50%, 6px);
+  }
+`;
+
+const TechLabel = styled.span`
+  position: absolute;
+  left: 50%;
+  bottom: -1rem;
+  transform: translate(-50%, 12px);
+  z-index: 3;
+  padding: 0.3rem 0.6rem;
+  font-size: 0.8rem;
+  color: ${theme.colors.darkFont};
+  white-space: nowrap;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.18s ease, transform 0.18s ease;
+  /* box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25); */
 `;
 
 function Home() {
   return (
     <HomeContainer>
-      <MenuTitle>About</MenuTitle>
-      <Bio>
-        Hello, <br />
-        &#9; I've spent the last 3 years immersing myself in coding, starting
-        with Python and gradually transitioning to frontend development, which
-        has become my passion. I completed postgraduate studies in 'Front-end
-        Development with Angular' to strengthen my skills. Currently, my focus
-        is on React and TypeScript. I've completed the Dare IT mentoring
-        program, where I worked with a mentor to refine my skills, and I've also
-        contributed to group projects, including a volunteer initiative with
-        Tech to the Rescue. <br />
-        <br />
-        &#9; Today, I'm working as a Junior Software Developer at EY, where I
-        continue to grow as a developer and apply my skills in real-world
-        projects. Feel free to check out my portfolio!
-      </Bio>
-      <TechnologiesDiv>
-        <TechnologiesColumn>
-          <TechnologiesTitle>Technologies I know:</TechnologiesTitle>
-          {technologiesIKnow.map((tech) => (
-            <Technology key={tech.name}>
-              <Icon name={tech.name} /> {tech.label}
-            </Technology>
-          ))}
-        </TechnologiesColumn>
-        <TechnologiesColumn>
-          <TechnologiesTitle>Technologies I'm learning:</TechnologiesTitle>
-          {technologiesImLearning.map((tech) => (
-            <Technology key={tech.name}>
-              <Icon name={tech.name} /> {tech.label}
-            </Technology>
-          ))}
-        </TechnologiesColumn>
-      </TechnologiesDiv>
+      <Section>
+        <MenuTitle>About</MenuTitle>
+
+        <Bio>
+          Hello! <br />
+          I’ve spent several years coding, starting with Python and moving into
+          frontend development, which has become my passion. I strengthened my
+          skills through postgraduate studies in Angular and the Dare IT
+          mentoring program, contributing to group projects including a
+          volunteer initiative with Tech to the Rescue.
+          <br /> <br />
+          My main interests currently are animations, MERN, accessibility, and
+          mobile development, but <br />
+          My ultimate goal is to{" "}
+          <HighlightedText> become a full-stack developer.</HighlightedText>
+          <br /> <br />
+          Today, I work as a{" "}
+          <HighlightedText>Junior Software Developer at EY</HighlightedText>,
+          where I continue to grow and apply my skills to exciting projects.
+          Feel free to check out my portfolio!
+        </Bio>
+
+        <TechnologiesDiv>
+          <TechnologiesColumn>
+            <TechnologiesTitle>Technologies I know:</TechnologiesTitle>
+
+            <TechCloud>
+              {technologiesIKnow.map((tech) => (
+                <TileWrap key={tech.name}>
+                  <TechTile aria-label={tech.label}>
+                    <Icon name={tech.name} />
+                    <TechLabel className="label">{tech.label}</TechLabel>
+                  </TechTile>
+                </TileWrap>
+              ))}
+            </TechCloud>
+          </TechnologiesColumn>
+        </TechnologiesDiv>
+      </Section>
     </HomeContainer>
   );
 }

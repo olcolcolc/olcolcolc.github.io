@@ -8,7 +8,6 @@ import { useState } from "react";
 import { Link } from "react-scroll";
 
 const NavbarDiv = styled.nav`
-  width: 100%;
   height: 100vh;
   display: flex;
   padding: 5rem;
@@ -42,11 +41,12 @@ const MenuLink = styled.li<{ isActive: boolean }>`
   list-style-type: none;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
+  font-weight: 700;
   color: ${theme.colors.darkFont};
   font-family: ${theme.fonts.workSans};
   cursor: pointer;
   margin-bottom: 0.5rem;
-  font-size: 2rem;
+  font-size: 1.5rem;
 
   &:after {
     content: "";

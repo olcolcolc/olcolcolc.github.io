@@ -29,7 +29,7 @@ const ProjectPosition = styled.div<ProjectPositionProps>`
   padding: 2rem;
   margin: 1rem;
   display: flex;
-  width: auto;
+  max-width: 1000px;
   justify-content: center;
   flex-direction: column;
   opacity: 1;
@@ -37,16 +37,18 @@ const ProjectPosition = styled.div<ProjectPositionProps>`
 
   &:hover {
     border-radius: 0.5rem;
-    background: rgba(19, 27, 48, 0.284);
+    background: ${theme.colors.mainBackground};
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 0 solid #e5e7eb;
   }
+  ${theme.mixins.forTablets(`
+    padding: 1rem 1rem;
+    margin: 0;
+  `)}
   ${theme.mixins.forMobiles(`
     flex-direction: column;
     align-items: center;
-    padding: 1rem 1rem;
-    margin: 0;
   `)}
 `;
 
@@ -64,7 +66,7 @@ const DetailsDiv = styled.div`
 
 const ProjectsName = styled.p<HoveredProps>`
   font-family: ${theme.fonts.montserrat};
-  font-size: larger;
+  font-size: x-large;
   text-align: center;
   font-weight: 700;
   padding: 0.5rem;
@@ -74,7 +76,7 @@ const ProjectsName = styled.p<HoveredProps>`
 `;
 
 const ProjectImg = styled.img`
-  width: 250px;
+  max-width: 300px;
   height: auto;
   padding: 1rem;
   align-self: flex-start;
@@ -92,7 +94,7 @@ const ProjectImg = styled.img`
 `;
 
 const Info = styled.div`
-  padding: 0.5rem 0.5rem;
+  padding: 1rem 0.5rem;
   letter-spacing: 0;
   text-align: left;
   color: ${theme.colors.white};
@@ -100,7 +102,7 @@ const Info = styled.div`
 
 const Link = styled.a`
   position: relative;
-  padding: 0.5rem;
+  padding-left: 0.5rem;
   font-size: medium;
   text-decoration: none;
   font-family: ${theme.fonts.montserrat};
@@ -128,7 +130,7 @@ const move = keyframes`
 const Technology = styled.ul`
   display: flex;
   justify-content: flex-start;
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
   flex-direction: row;
   flex-wrap: wrap;
   letter-spacing: 0.2rem;
