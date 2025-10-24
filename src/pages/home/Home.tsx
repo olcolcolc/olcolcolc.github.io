@@ -9,6 +9,7 @@ const HomeContainer = styled.div`
   ${theme.mixins.forTablets(`
     padding: 0;
   `)}
+  margin-bottom: 5rem;
 `;
 
 const Section = styled.section`
@@ -28,11 +29,10 @@ const MenuTitle = styled.header`
 
 const Bio = styled.div`
   ${theme.mixins.bio()}
-  padding: 5rem 0;
-
+  padding: 5rem 1.5rem;
   ${theme.mixins.forTablets(`
     padding: 3rem 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
   `)}
   ${theme.mixins.forMobiles(`
     padding: 1rem 0;
@@ -47,7 +47,7 @@ const TechnologiesColumn = styled.li`
 
 const TechnologiesTitle = styled.div`
   font-size: 1.6rem;
-  padding-bottom: 1.5rem;
+  padding-bottom: 2.5rem;
   color: ${theme.colors.darkFont};
   text-align: center;
 `;
@@ -61,6 +61,7 @@ const TechnologiesDiv = styled.div`
   flex-direction: row;
   align-items: flex-start;
   gap: 2rem;
+  padding: 2rem;
 `;
 
 const TechCloud = styled.ul`
@@ -72,7 +73,7 @@ const TechCloud = styled.ul`
   position: relative;
   justify-items: center;
   align-items: center;
-  max-width: 900px;
+  max-width: 800px;
   margin: 0 auto;
   overflow: visible;
 `;
@@ -106,8 +107,8 @@ const TechTile = styled.div`
   }
 
   & svg {
-    width: 32px !important;
-    height: 32px !important;
+    width: 42px !important;
+    height: 42px !important;
     display: block;
   }
 
@@ -162,7 +163,7 @@ function Home() {
 
         <TechnologiesDiv>
           <TechnologiesColumn>
-            <TechnologiesTitle>Technologies I know:</TechnologiesTitle>
+            <TechnologiesTitle>Tech stack:</TechnologiesTitle>
 
             <TechCloud>
               {technologiesIKnow.map((tech) => (

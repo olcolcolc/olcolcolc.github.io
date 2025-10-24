@@ -14,6 +14,7 @@ type ExpPositionProps = {
 
 const ExperienceDiv = styled.div`
   ${theme.mixins.home()}
+  margin-top: -6rem;
 `;
 
 const MenuTitle = styled.header`
@@ -21,7 +22,7 @@ const MenuTitle = styled.header`
 `;
 
 const ExperienceBio = styled.div`
-  padding: 2rem;
+  padding: 3rem;
   font-size: 1.25rem;
 `;
 
@@ -31,24 +32,23 @@ const Important = styled.p`
 `;
 
 const ExpPosition = styled.div<ExpPositionProps>`
-  padding: 1.5rem 0.5rem;
+  padding: 1.5rem 1rem;
   margin: 1rem;
   display: flex;
   justify-content: center;
   flex-direction: row;
   ${theme.mixins.defaultTransition}
-
   &:hover {
     border-radius: 0.5rem;
-    background: rgba(19, 27, 48, 0.284);
+    background: ${theme.colors.mainBackground};
     cursor: pointer;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     border: 0 solid #e5e7eb;
   }
-
-  ${theme.mixins.forMobiles(`
+  ${theme.mixins.forTablets(`
     flex-direction: column;
     align-items: center;
+    padding: 1rem 1rem;
   `)}
 `;
 
@@ -56,11 +56,11 @@ const Years = styled.p`
   display: flex;
   justify-content: flex-end;
   text-transform: uppercase;
-  padding: 0.5rem;
+  margin: 0.5rem;
   letter-spacing: 0.2rem;
   color: ${theme.colors.darkFont};
   font-family: ${theme.fonts.montserrat};
-  width: 9rem;
+  width: 10rem;
   ${theme.mixins.forTablets(`
     width: 100%;
     padding: 0 2rem;
@@ -70,7 +70,8 @@ const Years = styled.p`
 const Role = styled.p<RoleProps>`
   font-family: ${theme.fonts.montserrat};
   font-weight: 700;
-  padding: 0.5rem;
+  font-size: large;
+  padding: 0.5rem 0 0 0.5rem;
   color: ${(props) => (props.isHovered ? "orange" : theme.colors.darkFont)};
   transition: color 0.3s ease;
 `;
@@ -78,12 +79,13 @@ const Role = styled.p<RoleProps>`
 const Company = styled.p`
   padding: 0.5rem;
   font-size: large;
+  font-style: oblique;
   color: ${theme.colors.darkFont};
 `;
 
 const SchoolCourseDiv = styled.div`
   flex-direction: column;
-  width: 60%;
+  max-width: 50rem;
   ${theme.mixins.forTablets(`
     width: 100%;
     padding: 0 2rem;

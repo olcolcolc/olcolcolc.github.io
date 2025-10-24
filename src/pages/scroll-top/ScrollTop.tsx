@@ -6,15 +6,11 @@ import { theme } from "../../styles/theme";
 import { keyframes } from "@emotion/react";
 
 const fadeIn = keyframes`
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0.5;
-  }
+  from { opacity: 0; }
+  to { opacity: 0.5; }
 `;
 
-const ScrollButton = styled.button`
+const ScrollButton = styled.button<{ $visible: boolean }>`
   position: fixed;
   bottom: 3rem;
   right: 3rem;
@@ -24,10 +20,13 @@ const ScrollButton = styled.button`
   font-size: 3rem;
   cursor: pointer;
   z-index: 1000;
-  opacity: 0.5;
   background: transparent;
+  opacity: ${({ $visible }) => ($visible ? 0.5 : 0)};
+  visibility: ${({ $visible }) => ($visible ? "visible" : "hidden")};
+  transform: translateY(${({ $visible }) => ($visible ? "0" : "10px")});
+  transition: opacity 0.6s ease, visibility 0.6s ease, transform 0.6s ease;
   ${theme.mixins.defaultTransition}
-  animation: ${fadeIn} 1s ease-in-out;
+
   &:hover {
     opacity: 1;
   }
@@ -52,14 +51,15 @@ const ScrollTop = () => {
   };
 
   useEffect(() => {
-    window.addEventListener("scroll", toggleVisibility);
+    window.addEventListener("scroll", toggleVisibility, { passive: true });
     return () => window.removeEventListener("scroll", toggleVisibility);
   }, []);
 
   return (
     <ScrollButton
       onClick={scrollToTop}
-      style={{ display: isVisible ? "block" : "none" }}
+      $visible={isVisible}
+      aria-label="Scroll to top"
     >
       <FontAwesomeIcon icon={faArrowCircleUp} />
     </ScrollButton>
