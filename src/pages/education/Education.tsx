@@ -21,13 +21,12 @@ const MenuTitle = styled.header`
 `;
 
 const CvPosition = styled.div<CvPositionProps>`
-  padding: 1.5rem 0;
+  padding: 1.5rem 1rem;
   margin: 1rem;
   display: flex;
   justify-content: center;
   flex-direction: row;
   ${theme.mixins.defaultTransition}
-
   &:hover {
     border-radius: 0.5rem;
     background: ${theme.colors.mainBackground};
@@ -44,17 +43,15 @@ const CvPosition = styled.div<CvPositionProps>`
 
 const Years = styled.p`
   display: flex;
-  justify-content: flex-end;
-  text-transform: uppercase;
   padding: 0.5rem;
+  margin: 0;
+  justify-content: flex-start;
   letter-spacing: 0.2rem;
   color: ${theme.colors.darkFont};
   font-family: ${theme.fonts.montserrat};
-  width: 9rem;
   ${theme.mixins.forTablets(`
     width: 100%;
     justify-content: flex-start;
-
   `)}
 `;
 
@@ -78,7 +75,7 @@ const School = styled.p`
 
 const SchoolCourseDiv = styled.div`
   flex-direction: column;
-  width: 60%;
+  max-width: 60rem;
   ${theme.mixins.forTablets(`
     width: 100%;
   `)}

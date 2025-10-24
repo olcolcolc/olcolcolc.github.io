@@ -56,7 +56,7 @@ const DetailsDiv = styled.div`
   display: flex;
   flex-direction: row;
   padding: 0 0.5rem;
-  align-items: center;
+  align-items: flex-start;
 
   ${theme.mixins.forMobiles(`
       flex-direction: column;
@@ -76,8 +76,8 @@ const ProjectsName = styled.p<HoveredProps>`
 `;
 
 const ProjectImg = styled.img`
-  max-width: 300px;
-  height: auto;
+  /* max-width: 300px; */
+  max-height: 250px;
   padding: 1rem;
   align-self: flex-start;
   border-radius: 20px;
@@ -98,7 +98,6 @@ const Info = styled.div`
   letter-spacing: 0;
   text-align: left;
   color: ${theme.colors.white};
-  font-size: large;
 `;
 
 const Link = styled.a`
@@ -109,6 +108,7 @@ const Link = styled.a`
   font-family: ${theme.fonts.montserrat};
   color: ${theme.colors.darkFont};
   display: flex;
+  /* width: auto; */
   flex-direction: row;
   align-items: center;
 
@@ -140,10 +140,9 @@ const Technology = styled.ul`
 `;
 
 const ArrowIcon = styled(FontAwesomeIcon)<HoveredProps>`
-  transform: translateY(-50%);
   opacity: ${(props) => (props.ishovered === "true" ? 1 : 0)};
+  margin-left: 0.5rem;
   transition: opacity 0.3s ease;
-  padding-left: 0.5rem;
   animation: ${(props) =>
     props.ishovered
       ? css`
@@ -200,13 +199,13 @@ function Projects() {
                   />
                 </Link>
               )}
-              <Technology>
-                {project.technologies.map((tech) => (
-                  <Tech key={tech}>{tech}</Tech>
-                ))}
-              </Technology>
             </div>
           </DetailsDiv>
+          <Technology>
+            {project.technologies.map((tech) => (
+              <Tech key={tech}>{tech}</Tech>
+            ))}
+          </Technology>
         </ProjectPosition>
       ))}
     </ProjectsDiv>
