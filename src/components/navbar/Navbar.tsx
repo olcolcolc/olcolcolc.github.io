@@ -9,6 +9,7 @@ import { Link } from "react-scroll";
 
 const NavbarDiv = styled.nav`
   height: 100vh;
+  width: 100%;
   display: flex;
   padding: 5rem;
   justify-content: space-between;
@@ -31,6 +32,16 @@ const Header = styled.header`
   justify-content: flex-start;
 `;
 
+const Name = styled.div`
+  color: ${theme.colors.white};
+  font-size: 3rem;
+  line-height: 3rem;
+  margin-top: 2rem;
+  font-weight: 700;
+  padding-bottom: 1rem;
+  font-family: ${theme.fonts.grotesqueReg};
+`;
+
 const Menu = styled.ul`
   margin: 0;
   padding: 0.9rem 0 0 0;
@@ -44,6 +55,7 @@ const MenuLink = styled.li<{ isActive: boolean }>`
   font-weight: 700;
   color: ${theme.colors.darkFont};
   font-family: ${theme.fonts.workSans};
+  letter-spacing: 0.1rem;
   cursor: pointer;
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
@@ -53,7 +65,7 @@ const MenuLink = styled.li<{ isActive: boolean }>`
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 15rem;
+    width: 11rem;
     height: 1px;
     background-color: ${theme.colors.darkFont};
     transition: width 0.3s ease-in-out;
@@ -89,8 +101,6 @@ const MenuLink = styled.li<{ isActive: boolean }>`
 const IconsDiv = styled.div`
   display: flex;
   flex-direction: row;
-  align-items: center;
-  justify-content: center;
   color: ${theme.colors.darkFont};
   padding: 2rem;
   ${theme.mixins.forTablets(`
@@ -108,7 +118,7 @@ function Navbar() {
   return (
     <NavbarDiv>
       <Header>
-        <Text variant="title">Aleksandra Czyrnek</Text>
+        <Name>Aleksandra Czyrnek</Name>
         <Text variant="subtitle">
           {subtitle}
           <span style={{ color: "orange" }}>

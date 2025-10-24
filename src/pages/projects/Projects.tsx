@@ -98,6 +98,7 @@ const Info = styled.div`
   letter-spacing: 0;
   text-align: left;
   color: ${theme.colors.white};
+  font-size: large;
 `;
 
 const Link = styled.a`
