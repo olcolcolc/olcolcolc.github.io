@@ -11,7 +11,6 @@ const NavbarDiv = styled.nav`
   height: 100vh;
   width: 100%;
   display: flex;
-  padding: 5rem;
   justify-content: space-between;
   flex-direction: column;
   transition: 0.5s ease-in;
@@ -21,7 +20,6 @@ const NavbarDiv = styled.nav`
   z-index: 1;
   ${theme.mixins.forTablets(`
       height: auto;
-      padding: 2.5rem;
       position: static;
   `)}
 `;
@@ -30,6 +28,10 @@ const Header = styled.header`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  ${theme.mixins.forTablets(`
+      width: 100%;
+      padding: 1.5rem;
+  `)}
 `;
 
 const Name = styled.div`
@@ -45,6 +47,9 @@ const Name = styled.div`
 const Menu = styled.ul`
   margin: 0;
   padding: 0.9rem 0 0 0;
+  ${theme.mixins.forTablets(`
+      flex-direction: row;
+  `)}
 `;
 
 const MenuLink = styled.li<{ isActive: boolean }>`
@@ -70,6 +75,8 @@ const MenuLink = styled.li<{ isActive: boolean }>`
     background-color: ${theme.colors.darkFont};
     transition: width 0.3s ease-in-out;
   }
+
+  /* 18524K */
   &:hover {
     color: ${theme.colors.white};
     font-weight: 600;
@@ -77,9 +84,6 @@ const MenuLink = styled.li<{ isActive: boolean }>`
     &:after {
       width: 100%;
       color: ${theme.colors.white};
-      ${theme.mixins.forTablets(`
-        width: 14rem;
-      `)}
     }
   }
 
@@ -92,9 +96,6 @@ const MenuLink = styled.li<{ isActive: boolean }>`
         width: 100%;
         color: ${theme.colors.white};
       }
-      ${theme.mixins.forTablets(`
-        width: 14rem;
-      `)}
     `}
 `;
 

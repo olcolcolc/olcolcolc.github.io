@@ -13,9 +13,10 @@ const MainDiv = styled.div`
   display: flex;
   flex-direction: row;
   max-width: 1600px;
+  padding: 0 5rem;
   ${theme.mixins.forTablets(`
     flex-direction: column;
-    padding: 1rem;
+    padding: 0 2rem;
   `)}
 `;
 

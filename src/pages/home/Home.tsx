@@ -28,11 +28,11 @@ const MenuTitle = styled.header`
 
 const Bio = styled.div`
   ${theme.mixins.bio()}
-  padding: 5rem 0;
+  padding: 5rem 1.5rem;
 
   ${theme.mixins.forTablets(`
     padding: 3rem 0;
-    font-size: 1rem;
+    font-size: 1.2rem;
   `)}
   ${theme.mixins.forMobiles(`
     padding: 1rem 0;
