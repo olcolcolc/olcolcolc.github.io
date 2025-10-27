@@ -11,7 +11,9 @@ const NavbarDiv = styled.nav`
   height: 100vh;
   width: 100%;
   display: flex;
+
   justify-content: space-around;
+
   flex-direction: column;
   transition: 0.5s ease-in;
   background-color: inherit;
@@ -28,6 +30,7 @@ const Header = styled.header`
   display: flex;
   flex-direction: column;
   padding-top: 3rem;
+
   ${theme.mixins.forTablets(`
       width: 100%;
       padding: 1.5rem;
