@@ -20,8 +20,6 @@ import {
   siJira,
   siNodedotjs,
   siMongodb,
-  siExpress,
-  siReact as siReactBrand,
 } from "simple-icons/icons";
 
 const techIconWidth = "1.5rem";

@@ -23,7 +23,8 @@
     "react-scroll": "^1.9.0",
     "react-simple-typewriter": "^5.0.1",
     "simple-icons": "^15.17.0",
-    "types": "^0.1.1"
+    "types": "^0.1.1",
+    "unicornstudio-react": "^1.4.33"
   },
   "devDependencies": {
     "@types/node": "^20.12.7",

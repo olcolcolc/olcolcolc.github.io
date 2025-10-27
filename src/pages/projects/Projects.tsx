@@ -18,6 +18,8 @@ type ProjectPositionProps = {
 
 const ProjectsDiv = styled.div`
   ${theme.mixins.home()}
+  margin-top: -6rem;
+  margin-bottom: 5rem;
 `;
 
 const MenuTitle = styled.header`

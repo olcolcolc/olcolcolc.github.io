@@ -14,6 +14,7 @@ type ExpPositionProps = {
 
 const ExperienceDiv = styled.div`
   ${theme.mixins.home()}
+  margin-top: -6rem;
 `;
 
 const MenuTitle = styled.header`
@@ -69,7 +70,8 @@ const Years = styled.p`
 const Role = styled.p<RoleProps>`
   font-family: ${theme.fonts.montserrat};
   font-weight: 700;
-  padding: 0.5rem;
+  font-size: large;
+  padding: 0.5rem 0 0 0.5rem;
   color: ${(props) => (props.isHovered ? "orange" : theme.colors.darkFont)};
   transition: color 0.3s ease;
 `;
@@ -77,6 +79,7 @@ const Role = styled.p<RoleProps>`
 const Company = styled.p`
   padding: 0.5rem;
   font-size: large;
+  font-style: oblique;
   color: ${theme.colors.darkFont};
 `;
 

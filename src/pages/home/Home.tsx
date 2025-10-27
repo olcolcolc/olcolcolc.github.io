@@ -9,6 +9,7 @@ const HomeContainer = styled.div`
   ${theme.mixins.forTablets(`
     padding: 0;
   `)}
+  margin-bottom: 5rem;
 `;
 
 const Section = styled.section`
@@ -29,7 +30,6 @@ const MenuTitle = styled.header`
 const Bio = styled.div`
   ${theme.mixins.bio()}
   padding: 5rem 1.5rem;
-
   ${theme.mixins.forTablets(`
     padding: 3rem 0;
     font-size: 1.2rem;

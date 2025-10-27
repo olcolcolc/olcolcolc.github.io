@@ -22,8 +22,10 @@ const MainDiv = styled.div`
 
 const ScrollableDiv = styled.div`
   flex-direction: column;
+  padding-left: 5rem;
   ${theme.mixins.forTablets(`
     width: 100%;
+    padding-left: 0;
   `)}
 `;
 
