@@ -3,12 +3,6 @@ import styled from "@emotion/styled";
 import { faArrowCircleUp } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { theme } from "../../styles/theme";
-import { keyframes } from "@emotion/react";
-
-const fadeIn = keyframes`
-  from { opacity: 0; }
-  to { opacity: 0.5; }
-`;
 
 const ScrollButton = styled.button<{ $visible: boolean }>`
   position: fixed;
