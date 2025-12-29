@@ -20,6 +20,15 @@ const EducationDiv = styled.div`
 
 const MenuTitle = styled.header`
   ${theme.mixins.menuTitle()}
+  ${theme.mixins.forMobiles(`
+    margin-bottom: 0.5rem;
+  `)}
+`;
+
+const Wrapper = styled.div`
+  ${theme.mixins.forMobiles(`
+    padding: 0 0.5rem;
+  `)}
 `;
 
 const CvPosition = styled.div<CvPositionProps>`
@@ -41,12 +50,15 @@ const CvPosition = styled.div<CvPositionProps>`
     align-items: center;
     padding: 1rem 1rem;
   `)}
+  ${theme.mixins.forMobiles(`
+    padding: 1rem;
+    margin: 0rem;
+  `)}
 `;
 
 const Years = styled.p`
   display: flex;
   padding: 0.5rem;
-  margin: 0;
   justify-content: flex-start;
   letter-spacing: 0.2rem;
   color: ${theme.colors.darkFont};
@@ -54,6 +66,10 @@ const Years = styled.p`
   ${theme.mixins.forTablets(`
     width: 100%;
     justify-content: flex-start;
+  `)}
+  ${theme.mixins.forMobiles(`
+    font-size: 0.8rem;
+    padding: 0;
   `)}
 `;
 
@@ -65,7 +81,10 @@ const Course = styled.p<CourseProps>`
   transition: color 0.3s ease;
   ${theme.mixins.forTablets(`
     width: 100%;
-      color: ${theme.colors.orange};
+    color: ${theme.colors.orange};
+  `)}
+  ${theme.mixins.forMobiles(`
+    padding: 0rem;
   `)}
 `;
 
@@ -73,6 +92,10 @@ const School = styled.p`
   padding: 0.5rem;
   font-size: large;
   color: ${theme.colors.darkFont};
+  ${theme.mixins.forMobiles(`
+    font-size: 0.8rem;
+    padding: 0rem;
+  `)}
 `;
 
 const SchoolCourseDiv = styled.div`
@@ -87,6 +110,10 @@ const Info = styled.div`
   padding: 0.5rem;
   letter-spacing: 0;
   text-align: left;
+  ${theme.mixins.forTablets(`
+    padding: 0rem;
+    font-size: 0.8rem;
+  `)}
 `;
 
 function Education() {
@@ -95,22 +122,24 @@ function Education() {
   return (
     <EducationDiv>
       <MenuTitle>EDUCATION</MenuTitle>
-      {educationData.map((edu, index) => (
-        <CvPosition
-          key={index}
-          onMouseEnter={() => setHoveredPosition(index)}
-          onMouseLeave={() => setHoveredPosition(null)}
-        >
-          <Years>{edu.years}</Years>
-          <SchoolCourseDiv>
-            <Course isHovered={hoveredPosition === index} as="p">
-              {edu.course}
-            </Course>
-            <School>{edu.school}</School>
-            <Info>{edu.info}</Info>
-          </SchoolCourseDiv>
-        </CvPosition>
-      ))}
+      <Wrapper>
+        {educationData.map((edu, index) => (
+          <CvPosition
+            key={index}
+            onMouseEnter={() => setHoveredPosition(index)}
+            onMouseLeave={() => setHoveredPosition(null)}
+          >
+            <Years>{edu.years}</Years>
+            <SchoolCourseDiv>
+              <Course isHovered={hoveredPosition === index} as="p">
+                {edu.course}
+              </Course>
+              <School>{edu.school}</School>
+              <Info>{edu.info}</Info>
+            </SchoolCourseDiv>
+          </CvPosition>
+        ))}
+      </Wrapper>
     </EducationDiv>
   );
 }

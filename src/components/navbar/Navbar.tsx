@@ -59,7 +59,6 @@ const MenuLink = styled.li<{ isActive: boolean }>`
   position: relative;
   list-style-type: none;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
   font-weight: 700;
   color: ${theme.colors.darkFont};
   font-family: ${theme.fonts.workSans};
@@ -79,7 +78,6 @@ const MenuLink = styled.li<{ isActive: boolean }>`
     transition: width 0.3s ease-in-out;
   }
 
-  /* 18524K */
   &:hover {
     color: ${theme.colors.white};
     font-weight: 600;

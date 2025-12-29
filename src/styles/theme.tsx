@@ -67,6 +67,7 @@ const mixins = {
   white-space: nowrap;
   letter-spacing: 0.3em;
   padding: 1rem 0;
+  margin: 0;
     `,
   bio: () => `
     color: ${colors.white};
@@ -92,6 +93,10 @@ const mixins = {
   background: "#161f386d",
   padding: 1.5rem;
   backdrop-filter: blur(10px);
+      @media screen and (max-width: 640px) {
+      font-size: 1.2rem;
+      height: 2rem;
+    }
   `,
 };
 

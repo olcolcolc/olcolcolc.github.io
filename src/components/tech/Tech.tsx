@@ -15,7 +15,9 @@ const TechDiv = styled.div`
   white-space: nowrap;
   ${theme.mixins.defaultTransition}
   ${theme.mixins.forMobiles(`
-      padding: 0.5rem 0.5rem;
+      padding: 0.25rem 0.5rem;
+      font-size: 0.6rem;
+      margin: 0.2rem;
   `)}
 `;
 

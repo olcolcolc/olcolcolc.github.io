@@ -21,9 +21,19 @@ const MenuTitle = styled.header`
   ${theme.mixins.menuTitle()}
 `;
 
+const Wrapper = styled.div`
+  ${theme.mixins.forMobiles(`
+    padding: 0 0.5rem;
+  `)}
+`;
+
 const ExperienceBio = styled.div`
   padding: 3rem;
-  font-size: 1.25rem;
+  font-size: 1rem;
+  ${theme.mixins.forMobiles(`
+    padding: 1rem;
+    font-size: 0.8rem;
+  `)}
 `;
 
 const Important = styled.p`
@@ -48,7 +58,11 @@ const ExpPosition = styled.div<ExpPositionProps>`
   ${theme.mixins.forTablets(`
     flex-direction: column;
     align-items: center;
-    padding: 1rem 1rem;
+    padding: 1rem;
+  `)}
+  ${theme.mixins.forMobiles(`
+    padding: 0.5rem;
+    margin: 0.5rem 0;
   `)}
 `;
 
@@ -56,7 +70,7 @@ const Years = styled.p`
   display: flex;
   justify-content: flex-end;
   text-transform: uppercase;
-  margin: 0.5rem;
+  padding: 0.5rem;
   letter-spacing: 0.2rem;
   color: ${theme.colors.darkFont};
   font-family: ${theme.fonts.montserrat};
@@ -64,6 +78,10 @@ const Years = styled.p`
   ${theme.mixins.forTablets(`
     width: 100%;
     padding: 0 2rem;
+  `)}
+  ${theme.mixins.forMobiles(`
+    padding: 0rem;
+    font-size: 0.7rem;
   `)}
 `;
 
@@ -74,6 +92,9 @@ const Role = styled.p<RoleProps>`
   padding: 0.5rem 0 0 0.5rem;
   color: ${(props) => (props.isHovered ? "orange" : theme.colors.darkFont)};
   transition: color 0.3s ease;
+  ${theme.mixins.forMobiles(`
+    font-size: 1rem;
+  `)}
 `;
 
 const Company = styled.p`
@@ -81,6 +102,10 @@ const Company = styled.p`
   font-size: large;
   font-style: oblique;
   color: ${theme.colors.darkFont};
+  ${theme.mixins.forMobiles(`
+    font-size: 0.8rem;
+    padding: 0 0 0 0.5rem;
+  `)}
 `;
 
 const SchoolCourseDiv = styled.div`
@@ -90,11 +115,18 @@ const SchoolCourseDiv = styled.div`
     width: 100%;
     padding: 0 2rem;
   `)}
+  ${theme.mixins.forMobiles(`
+    padding: 0rem;
+  `)}
 `;
 
 const Info = styled.div`
   padding: 0.5rem;
   letter-spacing: 0;
+  ${theme.mixins.forMobiles(`
+    font-size: 0.8rem;
+    padding: 0 0 0 0.5rem;
+  `)}
 `;
 
 function Education() {
@@ -103,43 +135,47 @@ function Education() {
   return (
     <ExperienceDiv>
       <MenuTitle>EXPERIENCE</MenuTitle>
-      <ExperienceBio>
-        My professional experience story is quite unique. During my studies, I
-        discovered that my passion lies in pastry making. I pursued this
-        interest independently while working as a pastry chef and eventually
-        became the head of the pastry section in a well-known restaurant in
-        Wroclaw. Over more than 10 years in the industry, I developed qualities
-        such as hard work, patience, organization, responsibility, flexibility,
-        and the ability to perform under time pressure. I also learned how to
-        seek knowledge and grow independently. At the same time, I never gave up
-        on my interest in technology. I transitioned into IT, completing
-        postgraduate studies in Frontend Development with Angular, and
-        participating in group projects through Dare IT and Tech to the Rescue.
-        <Important>
-          Today, I am working as a Junior Software Developer at EY, where I
-          continue to develop my skills in modern technologies and agile
-          teamwork.
-        </Important>
-        I strongly believe that the discipline, adaptability, and
-        problem-solving mindset gained from my earlier career directly support
-        my effectiveness in programming projects.
-      </ExperienceBio>
-      {experienceData.map((exp, index) => (
-        <ExpPosition
-          key={index}
-          onMouseEnter={() => setHoveredPosition(index)}
-          onMouseLeave={() => setHoveredPosition(null)}
-        >
-          <Years>{exp.years}</Years>
-          <SchoolCourseDiv>
-            <Role isHovered={hoveredPosition === index} as="p">
-              {exp.role}
-            </Role>
-            <Company>{exp.company}</Company>
-            <Info>{exp.info}</Info>
-          </SchoolCourseDiv>
-        </ExpPosition>
-      ))}
+      <Wrapper>
+        <ExperienceBio>
+          My professional experience story is quite unique. During my studies, I
+          discovered that my passion lies in pastry making. I pursued this
+          interest independently while working as a pastry chef and eventually
+          became the head of the pastry section in a well-known restaurant in
+          Wroclaw. <br></br>
+          Over more than 10 years in the industry, I developed qualities such as
+          hard work, patience, organization, responsibility, flexibility, and
+          the ability to perform under time pressure. I also learned how to seek
+          knowledge and grow independently. At the same time, I never gave up on
+          my interest in technology. I transitioned into IT, completing
+          postgraduate studies in Frontend Development with Angular, and
+          participating in group projects through Dare IT and Tech to the
+          Rescue.
+          <Important>
+            Today, I am working as a Junior Software Developer at EY, where I
+            continue to develop my skills in modern technologies and agile
+            teamwork.
+          </Important>
+          I strongly believe that the discipline, adaptability, and
+          problem-solving mindset gained from my earlier career directly support
+          my effectiveness in programming projects.
+        </ExperienceBio>
+        {experienceData.map((exp, index) => (
+          <ExpPosition
+            key={index}
+            onMouseEnter={() => setHoveredPosition(index)}
+            onMouseLeave={() => setHoveredPosition(null)}
+          >
+            <Years>{exp.years}</Years>
+            <SchoolCourseDiv>
+              <Role isHovered={hoveredPosition === index} as="p">
+                {exp.role}
+              </Role>
+              <Company>{exp.company}</Company>
+              <Info>{exp.info}</Info>
+            </SchoolCourseDiv>
+          </ExpPosition>
+        ))}
+      </Wrapper>
     </ExperienceDiv>
   );
 }
