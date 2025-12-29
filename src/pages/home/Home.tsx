@@ -17,6 +17,9 @@ const Section = styled.section`
   width: 100%;
   margin: 0 auto;
   padding: 0 1.25rem;
+  ${theme.mixins.forMobiles(`
+    padding: 1rem;
+  `)}
 `;
 
 const MenuTitle = styled.header`
@@ -29,14 +32,15 @@ const MenuTitle = styled.header`
 
 const Bio = styled.div`
   ${theme.mixins.bio()}
-  padding: 5rem 1.5rem;
+  padding: 5rem 1.5rem 3rem;
+  font-size: 1.2rem;
   ${theme.mixins.forTablets(`
     padding: 3rem 0;
-    font-size: 1.2rem;
   `)}
   ${theme.mixins.forMobiles(`
     padding: 1rem 0;
     margin: 2rem 0;
+    font-size: 1rem;
   `)}
 `;
 
@@ -50,6 +54,10 @@ const TechnologiesTitle = styled.div`
   padding-bottom: 2.5rem;
   color: ${theme.colors.darkFont};
   text-align: center;
+  ${theme.mixins.forMobiles(`
+    padding-bottom: 1rem;
+    font-size: 1rem;
+  `)}
 `;
 
 const HighlightedText = styled.span`
@@ -62,6 +70,9 @@ const TechnologiesDiv = styled.div`
   align-items: flex-start;
   gap: 2rem;
   padding: 2rem;
+  ${theme.mixins.forMobiles(`
+    padding: 0rem;
+  `)}
 `;
 
 const TechCloud = styled.ul`
@@ -76,6 +87,16 @@ const TechCloud = styled.ul`
   max-width: 800px;
   margin: 0 auto;
   overflow: visible;
+
+  ${theme.mixins.forTablets(`
+    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    gap: 2rem;
+  `)}
+
+  ${theme.mixins.forMobiles(`
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  `)}
 `;
 
 const TileWrap = styled.li`
@@ -91,6 +112,12 @@ const TileWrap = styled.li`
   &:nth-of-type(5n) {
     transform: translateX(1px) rotate(-0.8deg);
   }
+
+  ${theme.mixins.forMobiles(`
+    & svg {
+      height: 26px !important;
+    }
+  `)}
 `;
 
 const TechTile = styled.div`
@@ -133,7 +160,10 @@ const TechLabel = styled.span`
   pointer-events: none;
   opacity: 0;
   transition: opacity 0.18s ease, transform 0.18s ease;
-  /* box-shadow: 0 6px 14px rgba(0, 0, 0, 0.25); */
+
+  ${theme.mixins.forMobiles(`
+    font-size: 0.7rem;
+  `)}
 `;
 
 function Home() {
@@ -144,7 +174,7 @@ function Home() {
 
         <Bio>
           Hello! <br />
-          I’ve spent several years coding, starting with Python and moving into
+          I've spent several years coding, starting with Python and moving into
           frontend development, which has become my passion. I strengthened my
           skills through postgraduate studies in Angular and the Dare IT
           mentoring program, contributing to group projects including a

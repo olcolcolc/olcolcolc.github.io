@@ -18,6 +18,9 @@ const MainDiv = styled.div`
     flex-direction: column;
     padding: 0 2rem;
   `)}
+  ${theme.mixins.forMobiles(`
+    padding: 0rem;
+  `)}
 `;
 
 const ScrollableDiv = styled.div`
@@ -31,6 +34,17 @@ const ScrollableDiv = styled.div`
 
 const SectionDiv = styled.div`
   padding: 1rem 0;
+`;
+
+const Footer = styled.footer`
+  display: flex;
+  justify-content: flex-end;
+  padding: 2rem 0 0 0;
+  letter-spacing: 0.2rem;
+  font-size: 0.7rem;
+  color: ${theme.colors.darkFont};
+  font-family: ${theme.fonts.montserrat};
+  width: 100%;
 `;
 
 function App() {
@@ -52,6 +66,7 @@ function App() {
         <SectionDiv id="Experience">
           <Experience />
         </SectionDiv>
+        <Footer>copyrights olcolcolc</Footer>
       </ScrollableDiv>
     </MainDiv>
   );

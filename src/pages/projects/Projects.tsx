@@ -20,11 +20,23 @@ const ProjectsDiv = styled.div`
   ${theme.mixins.home()}
   margin-top: -6rem;
   margin-bottom: 5rem;
+  ${theme.mixins.forMobiles(`
+    padding: 0 0.5rem;
+  `)}
 `;
 
 const MenuTitle = styled.header`
   ${theme.mixins.menuTitle()}
   ${theme.mixins.defaultTransition}
+  ${theme.mixins.forMobiles(`
+    margin-bottom: 0.5rem;
+  `)}
+`;
+
+const Wrapper = styled.div`
+  ${theme.mixins.forMobiles(`
+    padding: 0 0.5rem;
+  `)}
 `;
 
 const ProjectPosition = styled.div<ProjectPositionProps>`
@@ -50,7 +62,10 @@ const ProjectPosition = styled.div<ProjectPositionProps>`
   `)}
   ${theme.mixins.forMobiles(`
     flex-direction: column;
-    align-items: center;
+    align-items: center;  
+    padding: 0.5rem;
+    margin: 0.5rem 0;
+
   `)}
 `;
 
@@ -59,10 +74,11 @@ const DetailsDiv = styled.div`
   flex-direction: row;
   padding: 0 0.5rem;
   align-items: flex-start;
-
   ${theme.mixins.forMobiles(`
       flex-direction: column;
       align-items: center;
+      padding: 0rem;
+      font-size: 0.8rem;
   `)}
 `;
 
@@ -75,11 +91,16 @@ const ProjectsName = styled.p<HoveredProps>`
   color: ${(props) =>
     props.ishovered === "true" ? "orange" : theme.colors.darkFont};
   transition: color 0.3s ease;
+  ${theme.mixins.forMobiles(`
+      font-size: 0.9rem;
+      padding: 0rem;
+      color: ${theme.colors.orange}
+  `)}
 `;
 
 const ProjectImg = styled.img`
   /* max-width: 300px; */
-  max-height: 250px;
+  max-height: 200px;
   padding: 1rem;
   align-self: flex-start;
   border-radius: 20px;
@@ -90,8 +111,7 @@ const ProjectImg = styled.img`
     filter: brightness(0.9);
   }
   ${theme.mixins.forMobiles(`
-    justify-self: center;
-    width: 300px;
+    display: none;
   `)}
 `;
 
@@ -100,6 +120,9 @@ const Info = styled.div`
   letter-spacing: 0;
   text-align: left;
   color: ${theme.colors.white};
+  ${theme.mixins.forMobiles(`
+      padding: 0.5rem 0rem;
+  `)}
 `;
 
 const Link = styled.a`
@@ -118,6 +141,12 @@ const Link = styled.a`
     transition: transform 0.3s ease;
     text-decoration: underline;
   }
+
+  ${theme.mixins.forMobiles(`
+      font-size:  0.8rem;
+      padding-left: 0rem;
+      padding: 0.1rem 0;
+  `)}
 `;
 
 const move = keyframes`
@@ -139,6 +168,9 @@ const Technology = styled.ul`
   letter-spacing: 0.2rem;
   color: ${theme.colors.darkFont};
   font-family: ${theme.fonts.montserrat};
+  ${theme.mixins.forMobiles(`
+      padding: 0.3rem;
+  `)}
 `;
 
 const ArrowIcon = styled(FontAwesomeIcon)<HoveredProps>`
@@ -158,58 +190,62 @@ function Projects() {
   return (
     <ProjectsDiv>
       <MenuTitle>Projects</MenuTitle>
-      {projectsData.map((project) => (
-        <ProjectPosition
-          key={project.id}
-          onMouseEnter={() => setHoveredProjectId(project.id)}
-          onMouseLeave={() => setHoveredProjectId(null)}
-        >
-          <ProjectsName
-            ishovered={(hoveredProjectId === project.id).toString()}
-            as="div"
+      <Wrapper>
+        {projectsData.map((project) => (
+          <ProjectPosition
+            key={project.id}
+            onMouseEnter={() => setHoveredProjectId(project.id)}
+            onMouseLeave={() => setHoveredProjectId(null)}
           >
-            {project.name}
-          </ProjectsName>
-          {/* left side */}
-
-          <DetailsDiv>
-            <div
-              className="img"
-              style={{ display: "flex", justifySelf: "center" }}
+            <ProjectsName
+              ishovered={(hoveredProjectId === project.id).toString()}
+              as="div"
             >
-              {project.imgSrc && <ProjectImg src={project.imgSrc}></ProjectImg>}
-            </div>
-            {/* right side */}
-            <div style={{ flexDirection: "column" }}>
-              <Info>{project.description}</Info>
-              {project.githubUrl && (
-                <Link href={project.githubUrl} target="_blank">
-                  explore the code on github
-                  <ArrowIcon
-                    icon={faChevronLeft}
-                    ishovered={(hoveredProjectId === project.id).toString()}
-                  />
-                </Link>
-              )}
+              {project.name}
+            </ProjectsName>
+            {/* left side */}
 
-              {project.deployed && (
-                <Link href={project.deployed} target="_blank">
-                  check the deployed version
-                  <ArrowIcon
-                    icon={faChevronLeft}
-                    ishovered={(hoveredProjectId === project.id).toString()}
-                  />
-                </Link>
-              )}
-            </div>
-          </DetailsDiv>
-          <Technology>
-            {project.technologies.map((tech) => (
-              <Tech key={tech}>{tech}</Tech>
-            ))}
-          </Technology>
-        </ProjectPosition>
-      ))}
+            <DetailsDiv>
+              <div
+                className="img"
+                style={{ display: "flex", justifySelf: "center" }}
+              >
+                {project.imgSrc && (
+                  <ProjectImg src={project.imgSrc}></ProjectImg>
+                )}
+              </div>
+              {/* right side */}
+              <div style={{ flexDirection: "column" }}>
+                <Info>{project.description}</Info>
+                {project.githubUrl && (
+                  <Link href={project.githubUrl} target="_blank">
+                    explore the code on github
+                    <ArrowIcon
+                      icon={faChevronLeft}
+                      ishovered={(hoveredProjectId === project.id).toString()}
+                    />
+                  </Link>
+                )}
+
+                {project.deployed && (
+                  <Link href={project.deployed} target="_blank">
+                    check the deployed version
+                    <ArrowIcon
+                      icon={faChevronLeft}
+                      ishovered={(hoveredProjectId === project.id).toString()}
+                    />
+                  </Link>
+                )}
+              </div>
+            </DetailsDiv>
+            <Technology>
+              {project.technologies.map((tech) => (
+                <Tech key={tech}>{tech}</Tech>
+              ))}
+            </Technology>
+          </ProjectPosition>
+        ))}
+      </Wrapper>
     </ProjectsDiv>
   );
 }
