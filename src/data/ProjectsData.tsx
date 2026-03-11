@@ -1,8 +1,10 @@
 import CakeCalcReactAppImgSrc from "../../src/assets/imgs/CakeCalcReactApp.jpg";
+import LanguageAppSrc from "../../src/assets/imgs/languageapp.jpg";
 import RNWeatherAppSrc from "../../src/assets/imgs/RNWeatherApp.jpg";
 import JustMemesAppSrc from "../../src/assets/imgs/JustMemesApp.jpg";
 import LookUpNgSrc from "../../src/assets/imgs/LookUp.jpg";
 import tttrSrc from "../../src/assets/imgs/tttr.jpg";
+import raw07 from "../../src/assets/imgs/raw.jpg";
 
 interface Projects {
   id: string;
@@ -16,8 +18,24 @@ interface Projects {
 
 const projectsData: Projects[] = [
   {
+    id: "architecture-studio",
+    name: "In progress: raw07 studio",
+    imgSrc: raw07,
+    description:
+      "A professional web platform for an architecture studio. Developed in collaboration with a branding agency, responsible for the UI/UX design, while I handled the full frontend implementation and technical alignment.",
+    githubUrl: "",
+    deployed: "https://develop--raw07.netlify.app/",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Styled Components",
+      "Figma",
+      "Team Collaboration",
+    ],
+  },
+  {
     id: "dominik",
-    name: "In progress: Portfolio for a architect phd",
+    name: "In progress: Portfolio for an architect PhD",
     imgSrc: "",
     description:
       "A project for an architect, designed by me in Figma, developed in full cooperation with the client - from collecting the brief to programming it myself.",
@@ -27,13 +45,19 @@ const projectsData: Projects[] = [
   },
   {
     id: "languageapp",
-    name: "In progress: LanguageApp",
-    imgSrc: "",
+    name: "LanguageApp",
+    imgSrc: LanguageAppSrc,
     description:
-      'A project created collaboratively with the users of the "Polskie Programistki" server. A web application designed to assist in learning foreign languages.',
+      "A web application designed to assist in learning foreign languages, created collaboratively with the 'Polskie Programistki' community. I was responsible for developing the frontend architecture and key features within a team-based agile environment.",
     githubUrl: "https://github.com/LanguageAppSpace/language-app-frontend/",
     deployed: "https://staging-project-language-app.netlify.app/",
-    technologies: ["Styled components", "React MUI", "Trello"],
+    technologies: [
+      "React",
+      "MUI",
+      "Styled Components",
+      "Trello",
+      "Agile Collaboration",
+    ],
   },
   {
     id: "tasker",
