@@ -47,6 +47,7 @@ const ProjectPosition = styled.div<ProjectPositionProps>`
   justify-content: center;
   flex-direction: column;
   opacity: 1;
+  border: 0 solid transparent;
   ${theme.mixins.defaultTransition}
 
   &:hover {
