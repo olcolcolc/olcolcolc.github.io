@@ -47,6 +47,7 @@ const ExpPosition = styled.div<ExpPositionProps>`
   display: flex;
   justify-content: center;
   flex-direction: row;
+  border: 0 solid transparent;
   ${theme.mixins.defaultTransition}
   &:hover {
     border-radius: 0.5rem;
