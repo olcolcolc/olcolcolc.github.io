@@ -24,7 +24,7 @@ const projectsData: Projects[] = [
     description:
       "A professional web platform for an architecture studio. Developed in collaboration with a branding agency, responsible for the UI/UX design, while I handled the full frontend implementation and technical alignment.",
     githubUrl: "",
-    deployed: "https://develop--raw07.netlify.app/",
+    deployed: "https://www.raw07.com/",
     technologies: [
       "React",
       "TypeScript",
