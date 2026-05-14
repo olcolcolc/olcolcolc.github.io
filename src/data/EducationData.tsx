@@ -2,7 +2,7 @@ interface Education {
   years: string;
   course: string;
   school: string;
-  info: string;
+  info?: string;
 }
 
 const educationData: Education[] = [
@@ -23,6 +23,18 @@ const educationData: Education[] = [
     course: "Master degree in Management (Lean Management)",
     school: "University of Social Sciences and Humanities",
     info: "Throughout my Master's program in Management, specifically emphasizing Lean Management, I learned practical techniques to streamline operations and cut down unnecessary steps. We covered concepts like efficient workflow design, identifying and eliminating bottlenecks, and fostering a culture of continuous improvement within businesses.",
+  },
+  {
+    years: "2026",
+    course: "AI900 certification",
+    school: "Microsoft Certified: Azure AI Fundamentals",
+    info: "This certification demonstrates foundational knowledge of AI and machine learning concepts, as well as the ability to implement AI solutions on Microsoft Azure.",
+  },
+  {
+    years: "2026",
+    course: "GH-300 certification",
+    school: "Microsoft Certified: Github Copilot",
+    info: "This certification validates proficiency in using GitHub Copilot, an AI-powered code completion tool, to enhance coding efficiency and productivity.",
   },
 ];
 
