@@ -19,7 +19,7 @@ interface Projects {
 const projectsData: Projects[] = [
   {
     id: "architecture-studio",
-    name: "In progress: raw07 studio",
+    name: "raw07 studio",
     imgSrc: raw07,
     description:
       "A professional web platform for an architecture studio. Developed in collaboration with a branding agency, responsible for the UI/UX design, while I handled the full frontend implementation and technical alignment.",
@@ -33,16 +33,16 @@ const projectsData: Projects[] = [
       "Team Collaboration",
     ],
   },
-  {
-    id: "dominik",
-    name: "In progress: Portfolio for an architect PhD",
-    imgSrc: "",
-    description:
-      "A project for an architect, designed by me in Figma, developed in full cooperation with the client - from collecting the brief to programming it myself.",
-    githubUrl: "",
-    deployed: "",
-    technologies: ["Styled components", "React", "Typescript", "Figma"],
-  },
+  // {
+  //   id: "dominik",
+  //   name: "In progress: Portfolio for an architect PhD",
+  //   imgSrc: "",
+  //   description:
+  //     "A project for an architect, designed by me in Figma, developed in full cooperation with the client - from collecting the brief to programming it myself.",
+  //   githubUrl: "",
+  //   deployed: "",
+  //   technologies: ["Styled components", "React", "Typescript", "Figma"],
+  // },
   {
     id: "languageapp",
     name: "LanguageApp",
