@@ -1,7 +1,7 @@
 import CakeCalcReactAppImgSrc from "../../src/assets/imgs/CakeCalcReactApp.jpg";
 import LanguageAppSrc from "../../src/assets/imgs/languageapp.jpg";
 import RNWeatherAppSrc from "../../src/assets/imgs/RNWeatherApp.jpg";
-import JustMemesAppSrc from "../../src/assets/imgs/JustMemesApp.jpg";
+// import JustMemesAppSrc from "../../src/assets/imgs/JustMemesApp.jpg";
 import LookUpNgSrc from "../../src/assets/imgs/LookUp.jpg";
 import tttrSrc from "../../src/assets/imgs/tttr.jpg";
 import raw07 from "../../src/assets/imgs/raw.jpg";
