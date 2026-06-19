@@ -5,6 +5,7 @@ import JustMemesAppSrc from "../../src/assets/imgs/JustMemesApp.jpg";
 import LookUpNgSrc from "../../src/assets/imgs/LookUp.jpg";
 import tttrSrc from "../../src/assets/imgs/tttr.jpg";
 import raw07 from "../../src/assets/imgs/raw.jpg";
+import thermomixWithMikeSrc from "../../src/assets/imgs/thermomixwithmike.jpg";
 
 interface Projects {
   id: string;
@@ -30,7 +31,25 @@ const projectsData: Projects[] = [
       "TypeScript",
       "Styled Components",
       "Figma",
-      "Team Collaboration",
+      "i18n",
+      "emotion",
+    ],
+  },
+  {
+    id: "thermomix-with-mike",
+    name: "Thermomix with Mike",
+    imgSrc: thermomixWithMikeSrc,
+    description:
+      "A website for a Thermomix brand ambassador. I handled the full design in Figma, frontend implementation, and also set up and configured the custom domain myself.",
+    githubUrl: "",
+    deployed: "https://www.thermomixwithmike.com/",
+    technologies: [
+      "React",
+      "TypeScript",
+      "Styled Components",
+      "Figma",
+      "i18n",
+      "emotion",
     ],
   },
   // {
@@ -107,16 +126,16 @@ const projectsData: Projects[] = [
     ],
   },
 
-  {
-    id: "justmemesapp",
-    name: "JustMemesApp",
-    imgSrc: JustMemesAppSrc,
-    description:
-      "It allows users to view and post memes to a Firebase Firestore database. Users can also vote on memes by liking or disliking them. App provides an enjoyable browsing experience for users, allowing them to explore and interact with a collection of memes. ",
-    githubUrl: "https://github.com/olcolcolc/JustMemesApp",
-    deployed: "https://just-memes-app.netlify.app/",
-    technologies: ["React", "Typescript", "Scss", "Firebase Firestore", "Jest"],
-  },
+  // {
+  //   id: "justmemesapp",
+  //   name: "JustMemesApp",
+  //   imgSrc: JustMemesAppSrc,
+  //   description:
+  //     "It allows users to view and post memes to a Firebase Firestore database. Users can also vote on memes by liking or disliking them. App provides an enjoyable browsing experience for users, allowing them to explore and interact with a collection of memes. ",
+  //   githubUrl: "https://github.com/olcolcolc/JustMemesApp",
+  //   deployed: "https://just-memes-app.netlify.app/",
+  //   technologies: ["React", "Typescript", "Scss", "Firebase Firestore", "Jest"],
+  // },
 
   {
     id: "lookupng",
