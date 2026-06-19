@@ -55,9 +55,13 @@ const Menu = styled.ul`
   `)}
 `;
 
-const MenuLink = styled.li<{ isActive: boolean }>`
-  position: relative;
+const MenuItem = styled.li`
   list-style-type: none;
+`;
+
+const MenuLink = styled(Link)<{ isActive: boolean }>`
+  position: relative;
+  display: inline-block;
   text-transform: uppercase;
   font-weight: 700;
   color: ${theme.colors.darkFont};
@@ -66,6 +70,7 @@ const MenuLink = styled.li<{ isActive: boolean }>`
   cursor: pointer;
   margin-bottom: 0.5rem;
   font-size: 1.5rem;
+  text-decoration: none;
 
   &:after {
     content: "";
@@ -85,6 +90,16 @@ const MenuLink = styled.li<{ isActive: boolean }>`
     &:after {
       width: 100%;
       color: ${theme.colors.white};
+    }
+  }
+
+  &:focus-visible {
+    color: ${theme.colors.white};
+    outline: 2px solid ${theme.colors.white};
+    outline-offset: 4px;
+
+    &:after {
+      width: 100%;
     }
   }
 
@@ -129,23 +144,22 @@ function Navbar() {
         </Text>
         <Menu>
           {["About", "Education", "Projects", "Experience"].map((link) => (
-            <Link
-              key={link}
-              activeClass="active"
-              to={link}
-              spy={true}
-              smooth="easeInOutQuart"
-              offset={-70}
-              duration={1000}
-            >
+            <MenuItem key={link}>
               <MenuLink
-                key={link}
+                activeClass="active"
+                to={link}
+                spy={true}
+                smooth="easeInOutQuart"
+                offset={-70}
+                duration={1000}
                 isActive={activeLink === link}
                 onClick={() => setActiveLink(link)}
+                onSetActive={() => setActiveLink(link)}
+                tabIndex={0}
               >
                 {link}
               </MenuLink>
-            </Link>
+            </MenuItem>
           ))}
         </Menu>
       </Header>
@@ -153,10 +167,17 @@ function Navbar() {
         <a
           href="https://www.linkedin.com/in/aleksandraczyrnek/"
           target="_blank"
+          rel="noreferrer"
+          aria-label="LinkedIn profile"
         >
           <Icon name="linkedin" />
         </a>
-        <a href="https://www.github.com/olcolcolc" target="_blank">
+        <a
+          href="https://www.github.com/olcolcolc"
+          target="_blank"
+          rel="noreferrer"
+          aria-label="GitHub profile"
+        >
           <Icon name="github" />
         </a>
       </IconsDiv>
